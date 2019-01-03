@@ -42,5 +42,5 @@ class LaporanKeuangan(models.Model):
     stock_price = models.IntegerField()
     kurs_rupiah_dollar = models.IntegerField()
 
-    def __str__(str):
+    def __str__(self):
         return '%s %s'%(self.kd_perusahaan, self.year)
