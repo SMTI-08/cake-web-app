@@ -11,7 +11,7 @@ class CompanySector(models.Model):
         return '%s %s'%(self.sector_code, self.sector_name)
 
 class Company(models.Model):
-    company_sector = models.ForeignKey(CompanySector, related_name='fk_companysector_to_company', on_delete=models.CASCADE)
+    company_sector = models.ForeignKey(CompanySector, related_name='fk_companysectors_to_company', on_delete=models.CASCADE)
     company_code = models.CharField(primary_key=True, max_length=10)
     company_name = models.CharField(max_length=50)
     company_desc = models.TextField()
@@ -21,7 +21,7 @@ class Company(models.Model):
 
 
 class FinancialStatement(models.Model):
-    company = models.ForeignKey(Company, related_name='fk_company_to_financialstatement', on_delete=models.CASCADE)
+    company = models.ForeignKey(Company, related_name='fk_companys_to_financialstatement', on_delete=models.CASCADE)
     year = models.CharField(max_length=4, choices=(('2017','2017'), ('2016','2016'), ('2015','2015'), ('2014','2014'), ('2013','2013')))
     cash = models.BigIntegerField()
     inventory = models.BigIntegerField()

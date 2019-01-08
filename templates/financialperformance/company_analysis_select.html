@@ -1,0 +1,15 @@
+{% extends 'financialperformance/base.html' %}
+
+{% block content %}
+
+<form method="GET" action="{% url 'company_analysis_url' %}">
+  <select name="q" placeholder="Search company">
+    <option disabled selected hidden>Select Company</option>
+    {% for financialdata in financialdata %}
+      <option value="{{ financialdata.company.company_code }}">{{ financialdata.company.company_name }}</option>
+    {% endfor%}
+  </select>
+  <input type="submit" value="Analysis">
+</form>
+
+{% endblock %}

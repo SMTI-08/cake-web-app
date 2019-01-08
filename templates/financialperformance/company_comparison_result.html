@@ -1,0 +1,18 @@
+{% extends 'financialperformance/base.html' %}
+
+{% block content %}
+
+<form method="GET" action="{% url 'company_comparison_url' %}">
+  {% for financialdata in financialdata %}
+    <input type="checkbox"name='q' value="{{ financialdata.company.company_code }}"/><label>{{ financialdata.company.company_name }}</label>
+  {% endfor%}
+  <input type="submit" value="Compare">
+</form>
+
+{% for companyfilter in companyfilter %}
+  <p>{{ companyfilter.company.company_sector.sector_name }}</p>
+  <p>{{ companyfilter.company.company_name }}</p>
+  <p>{{ companyfilter.cash_ratio }}</p>
+{% endfor %}
+
+{% endblock %}
