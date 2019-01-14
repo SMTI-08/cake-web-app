@@ -2,11 +2,29 @@
 
 {% block content %}
 
-<form method="GET" action="{% url 'company_comparison_url' %}">
-  {% for financialdata in financialdata %}
-    <input type="checkbox"name='q' value="{{ financialdata.company.company_code }}"/><label>{{ financialdata.company.company_name }}</label>
-  {% endfor%}
-  <input type="submit" value="Compare">
-</form>
+<div class="container-fluid" >
+
+  <div style="margin-top:50px; margin-left:10px; margin-right:10px;">
+
+    <div class="row text-center">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <form method="GET" action="{% url 'company_comparison_url' %}">
+          <select class="js-example-basic-multiple" name="q" multiple="multiple"  style="width:70%;">
+            {% for financialdata in financialdata %}
+              <option value="{{ financialdata.company.company_code }}">{{ financialdata.company.company_name }} ({{ financialdata.company.company_code }}) - {{ financialdata.company.company_sector.sector_name }}</option>
+            {% endfor%}
+          </select>
+          <button class="btn-save btn btn-primary btn-sm">Compare</button>
+        </form>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    </div>
+
+    
+
+  </diV>
+
+</div>
 
 {% endblock %}

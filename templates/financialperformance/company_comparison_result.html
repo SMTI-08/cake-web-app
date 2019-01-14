@@ -2,17 +2,170 @@
 
 {% block content %}
 
-<form method="GET" action="{% url 'company_comparison_url' %}">
-  {% for financialdata in financialdata %}
-    <input type="checkbox"name='q' value="{{ financialdata.company.company_code }}"/><label>{{ financialdata.company.company_name }}</label>
-  {% endfor%}
-  <input type="submit" value="Compare">
-</form>
+<div class="container-fluid" >
 
-{% for companyfilter in companyfilter %}
-  <p>{{ companyfilter.company.company_sector.sector_name }}</p>
-  <p>{{ companyfilter.company.company_name }}</p>
-  <p>{{ companyfilter.cash_ratio }}</p>
-{% endfor %}
+  <div style="margin-top:50px; margin-left:10px; margin-right:10px;">
+
+    <div class="row text-center">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <form method="GET" action="{% url 'company_comparison_url' %}">
+          <select class="js-example-basic-multiple" name="q" multiple="multiple"  style="width:70%;">
+            {% for financialdata in financialdata %}
+              <option value="{{ financialdata.company.company_code }}">{{ financialdata.company.company_name }} ({{ financialdata.company.company_code }}) - {{ financialdata.company.company_sector.sector_name }}</option>
+            {% endfor%}
+          </select>
+          <button class="btn-save btn btn-primary btn-sm">Compare</button>
+        </form>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    </div>
+
+    <div class="row" style="margin-top:30px;">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <div style="width:100%; height:100%; border:2px solid white; background-color:white; border-radius: 5px; padding:1%">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Financial Performance Variable</th>
+                {% for companyfilter in companyfilter %}
+                  <th scope="col" style="text-align:center;">{{ companyfilter.company.company_name }}</th>
+                {% endfor %}
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Current Asset</th>
+                {% for companyfilter in companyfilter %}
+                  <td style="text-align:center;">{{ companyfilter.current_asset }}</td>
+                {% endfor %}
+              </tr>
+              <tr>
+                <th scope="row">Current Liabilities</th>
+                {% for companyfilter in companyfilter %}
+                  <td style="text-align:center;">{{ companyfilter.current_liabilities }}</td>
+                {% endfor %}
+              </tr>
+              <tr>
+                <th scope="row">Total Liabilities</th>
+                {% for companyfilter in companyfilter %}
+                  <td style="text-align:center;">{{ companyfilter.total_liabilities }}</td>
+                {% endfor %}
+              </tr>
+              <tr>
+                <th scope="row">Outstanding Share</th>
+                {% for companyfilter in companyfilter %}
+                  <td style="text-align:center;">{{ companyfilter.outstanding_share }}</td>
+                {% endfor %}
+              </tr>
+              <tr>
+                <th scope="row">Total Equity</th>
+                {% for companyfilter in companyfilter %}
+                  <td style="text-align:center;">{{ companyfilter.total_equity }}</td>
+                {% endfor %}
+              </tr>
+              <tr>
+                <th scope="row">Total Revenue</th>
+                {% for companyfilter in companyfilter %}
+                  <td style="text-align:center;">{{ companyfilter.total_revenue }}</td>
+                {% endfor %}
+              </tr>
+              <tr>
+                <th scope="row">Operating Profit</th>
+                {% for companyfilter in companyfilter %}
+                  <td style="text-align:center;">{{ companyfilter.operating_profit }}</td>
+                {% endfor %}
+              </tr>
+              <tr>
+                <th scope="row">Net Profit</th>
+                {% for companyfilter in companyfilter %}
+                  <td style="text-align:center;">{{ companyfilter.net_profit }}</td>
+                {% endfor %}
+              </tr>
+              <tr>
+                <th scope="row">Earning per Share</th>
+                {% for companyfilter in companyfilter %}
+                  <td style="text-align:center;">{{ companyfilter.earnings_per_share }}</td>
+                {% endfor %}
+              </tr>
+              <tr>
+                <th scope="row">Dividend Payment</th>
+                {% for companyfilter in companyfilter %}
+                  <td style="text-align:center;">{{ companyfilter.dividend_payment }}</td>
+                {% endfor %}
+              </tr>
+              <tr>
+                <th scope="row">Stock Price</th>
+                {% for companyfilter in companyfilter %}
+                  <td style="text-align:center;">{{ companyfilter.stock_price }}</td>
+                {% endfor %}
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    </div>
+
+    <div class="row text-center" style="margin-top:30px; margin-bottom:30px;">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <div id="current_ratio_graph"></div>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    </div>
+
+    <div class="row text-center" style="margin-top:30px; margin-bottom:30px;">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <div id="debt_to_equity_ratio_graph"></div>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    </div>
+
+    <div class="row text-center" style="margin-top:30px; margin-bottom:30px;">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <div id="return_on_equity_graph"></div>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    </div>
+  </div>
+
+  <div class="row text-center" style="margin-top:30px; margin-bottom:30px;">
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+      <div id="operating_profit_margin_graph"></div>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+  </div>
+
+  <div class="row text-center" style="margin-top:30px; margin-bottom:30px;">
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+      <div id="net_profit_margin_graph"></div>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+  </div>
+
+  <div class="row text-center" style="margin-top:30px; margin-bottom:30px;">
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+      <div id="price_earning_ratio_graph"></div>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+  </div>
+
+  <div class="row text-center" style="margin-top:30px; margin-bottom:30px;">
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+      <div id="dividend_yield_graph"></div>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+  </div>
+</div>
+
+</div>
 
 {% endblock %}
