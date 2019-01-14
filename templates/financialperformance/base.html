@@ -14,6 +14,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 
     <!-- W3 CSS -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -36,52 +37,83 @@
         min-height: 100%;
       }
 
-      #main {
-        overflow: auto;
-        margin:auto;
-      }
-
       #footer {
         position: relative;
         clear:both;
-        margin-top: -100px;
-        background-color:#D0EFFB;
-        min-height: 100px;
+        margin-top: 50px;
+        background-color:#22a6b3;
+        min-height: 200px;
+      }
+
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: white;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #989898;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .sidenav a:hover {
+        color: #48dbfb;
+        font-weight: bold;
+        background-color: #F0F0F0;
+      }
+
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+
+      #main {
+        transition: margin-left .5s;
+        padding: 16px;
+      }
+
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
       }
     </style>
   </head>
 
-  <body>
+  <body style='background-color:#dcdde1;'>
     <div id="container">
-      <div id="main">
-        <nav class="navbar navbar-expand-md navbar-dark" style="background-color:#50A2BC; !impotant">
 
-          <a class="navbar-brand" href="#"><img src="{% static 'image/cake.png'%}" width="100"></a>
-
-          <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target"  style="border-color:white; !impotant">
-            <span class="navbar-toggler-icon" style="border-color: white; !impotant"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="collapse_target">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'company_analysis_url' %}"><h6>Analysis</h6></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'company_comparison_url' %}"><h6>Comparison</h6></a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-
-        <div>
-          {% block content %}
-
-          {% endblock %}
-        </div>
-
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a><img src="{% static 'image/cake.png'%}" width="175" style="text-center"></a>
+        <br>
+        <h5 style="margin-left:15px; color:#989898;">Navigation</h5>
+        <a href="{% url 'main_dashboard_url' %}"><span class="glyphicon glyphicon-home"></span> Dashboard</a>
+        <a href="{% url 'company_analysis_url' %}"><span class="glyphicon glyphicon-stats"></span> Analysis Financial Performance</a>
+        <a href="{% url 'company_comparison_url' %}"><span class="glyphicon glyphicon-transfer"></span> Comparison Financial Performance</a>
       </div>
 
+      <div id="main" style="margin: 0; padding: 0;" >
+        <div class="row" style="background-color:#48dbfb; margin: 0; padding: 0;" >
+          <span style="font-size:50px;cursor:pointer; margin-left:10px; color:white;" onclick="openNav()">&#9776;</span>
+        </div>
+        {% block content %}
+
+        {% endblock %}
+      </div>
     </div>
 
     <footer id="footer" align="center">
@@ -92,11 +124,26 @@
       </div>
     </footer>
 
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Sidenav -->
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+      }
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        document.body.style.backgroundColor = "#DBDBE0";
+      }
+    </script>
 
   </body>
 
