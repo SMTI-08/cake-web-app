@@ -2,20 +2,341 @@
 
 {% block content %}
 
-<form method="GET" action="{% url 'company_analysis_url' %}">
-  <select name="q" placeholder="Search company">
-    <option disabled selected hidden>Select Company</option>
-    {% for financialdata in financialdata %}
-      <option value="{{ financialdata.company.company_code }}">{{ financialdata.company.company_name }}</option>
-    {% endfor%}
-  </select>
-  <input type="submit" value="Analysis">
-</form>
+<div class="container-fluid" >
 
-{% for companyfilter in companyfilter %}
-  <p>{{ companyfilter.company.company_sector.sector_name }}</p>
-  <p>{{ companyfilter.company.company_name }}
-  <p>{{ companyfilter.cash_ratio }}</p>
-{% endfor%}
+  <div style="margin-top:20px; margin-left:20px; margin-right:20px;">
+
+    <h4 style="width:bold;">Analysis Financial Performance</h4>
+    <h4 style="color:#535B68">The Following is the level of performance of a bussiness over a specified period of time</h4>
+
+    <div class="row text-center" style="margin-top:10px; padding:0.9%">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="padding:0px; margin:0px;">
+        <form method="GET" action="{% url 'company_analysis_url' %}">
+          <select class="js-example-basic-single js-states form-control" name="q" style="width:70%;">
+            <option></option>
+            {% for financialdata in financialdata %}
+              <option value="{{ financialdata.company.company_code }}">{{ financialdata.company.company_name }} ({{ financialdata.company.company_code }}) - {{ financialdata.company.company_sector.sector_name }}</option>
+            {% endfor%}
+          </select>
+          <button class="btn-save btn btn-primary btn-sm">Analyze</button>
+        </form>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    </div>
+
+    {% for companyfilter in companyfilter %}
+
+    <div class="row text-center" style="margin-top:30px;">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <div style="width:100%; height:100%; border:2px solid white; background-color:white; border-radius: 5px; padding:2%">
+          <h4 style="margin-bottom:30px;">Financial performance of {{ companyfilter.company.company_name }} 2017</h4>
+          <div class="row" style="padding-left:2%; padding-right:2%">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div class="row" style="padding:1%">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"> Cash</div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.cash}}</div></div>
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"> Inventory</div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.inventory}}</div></div>
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"> Current Asset</div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.current_asset}}</div></div>
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"> Fixed Asset</div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.fixed_asset}}</div></div>
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"> Total Asset</div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.total_asset }}</div></div>
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"> Current Liabilities</div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.current_liabilities }}</div></div>
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"> Long Term Liabilities</div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.long_term_liabilities }}</div></div>
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"> Total Liabilities</div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.total_liabilities }}</div></div>
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"> Outstanding Share</div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.outstanding_share }}</div></div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div class="row" style="padding:1%">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"> Total Equity</div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.total_equity }}</div></div>
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"> Total Revenue</div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.total_revenue }}</div></div>
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"> Gross Profit</div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.gross_profit }}</div></div>
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"> Operating Profit</div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.operating_profit }}</div></div>
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"> Interest Expense</div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.interest_expense }}</div></div>
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"> Net Profit</div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.net_profit }}</div></div>
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"> Earning per Share</div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.earnings_per_share }}</div></div>
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"> Dividend Payment</div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.dividend_payment }}</div></div>
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"> Stock Price</div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.stock_price }}</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    </div>
+
+    <div class="row text-center" style="margin-top:30px;">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div style="width:100%; height:100%; border:2px solid white; background-color:white; border-radius: 5px; padding:2%">
+              <h4 style="margin-bottom:20px;">Liquidity Ratio</h4>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:left">Cash Ratio</div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.cash_ratio }} %</div></div>
+                {% if companyfilter.cash_ratio < 140 %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:red;">Not Good</div></div>
+                {% else %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:green;">Good</div></div>
+                {% endif %}
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:left">Quick Acid Ratio</div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.quick_acid_ratio }} %</div></div>
+                {% if companyfilter.quick_acid_ratio < 140 %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:red;">Not Good</div></div>
+                {% else %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:green;">Good</div></div>
+                {% endif %}
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:left">Current Ratio</div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.current_ratio }} %</div></div>
+                {% if companyfilter.current_ratio < 140 %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:red;">Not Good</div></div>
+                {% else %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:green;">Good</div></div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div style="width:100%; height:100%; border:2px solid white; background-color:white; border-radius: 5px; padding:2%">
+              <h4 style="margin-bottom:20px;">Solvability Ratio</h4>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:left">Debt to Asset</div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.debt_to_asset }} %</div></div>
+                {% if companyfilter.debt_to_asset < 140 %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:red;">Not Good</div></div>
+                {% else %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:green;">Good</div></div>
+                {% endif %}
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:left">Debt to Equity</div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.debt_to_equity }} %</div></div>
+                {% if companyfilter.debt_to_equity < 140 %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:red;">Not Good</div></div>
+                {% else %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:green;">Good</div></div>
+                {% endif %}
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:left">Long Term Debt to Equity</div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.long_term_debt_to_equity }} %</div></div>
+                {% if companyfilter.long_term_debt_to_equity < 140 %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:red;">Not Good</div></div>
+                {% else %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:green;">Good</div></div>
+                {% endif %}
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:left">Coverage Ratio</div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.coverage_ratio }} %</div></div>
+                {% if companyfilter.coverage_ratio < 140 %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:red;">Not Good</div></div>
+                {% else %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:green;">Good</div></div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    </div>
+
+    <div class="row text-center" style="margin-top:30px;">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div style="width:100%; height:100%; border:2px solid white; background-color:white; border-radius: 5px; padding:2%">
+              <h4 style="margin-bottom:20px;">Profitability Ratio</h4>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:left">Return on Equity</div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.return_on_equity }} %</div></div>
+                {% if companyfilter.return_on_equity < 140 %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:red;">Not Good</div></div>
+                {% else %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:green;">Good</div></div>
+                {% endif %}
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:left">Return on Asset</div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.return_on_asset }} %</div></div>
+                {% if companyfilter.return_on_asset < 140 %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:red;">Not Good</div></div>
+                {% else %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:green;">Good</div></div>
+                {% endif %}
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:left">Gross Profit Margin</div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.gross_profit_margin }} %</div></div>
+                {% if companyfilter.gross_profit_margin < 140 %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:red;">Not Good</div></div>
+                {% else %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:green;">Good</div></div>
+                {% endif %}
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:left">Operating Profit Margin</div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.operating_profit_margin }} %</div></div>
+                {% if companyfilter.operating_profit_margin < 140 %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:red;">Not Good</div></div>
+                {% else %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:green;">Good</div></div>
+                {% endif %}
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:left">Net Profit Margin</div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.net_profit_margin }} %</div></div>
+                {% if companyfilter.net_profit_margin < 140 %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:red;">Not Good</div></div>
+                {% else %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:green;">Good</div></div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div style="width:100%; height:100%; border:2px solid white; background-color:white; border-radius: 5px; padding:2%">
+              <h4 style="margin-bottom:20px;">Market Ratio Ratio</h4>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:left">Price Earning Ratio</div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.price_earning_ratio }}</div></div>
+                {% if companyfilter.price_earning_ratio < 140 %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:red;">Not Good</div></div>
+                {% else %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:green;">Good</div></div>
+                {% endif %}
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:left">Price to Book Value</div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.price_to_book_value }}</div></div>
+                {% if companyfilter.price_to_book_value < 140 %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:red;">Not Good</div></div>
+                {% else %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:green;">Good</div></div>
+                {% endif %}
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:left">Dividend per Share</div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.dividend_per_share }}</div></div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"></div>
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:left">Dividend Yield</div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.dividend_yield }} %</div></div>
+                {% if companyfilter.dividend_yield < 140 %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:red;">Not Good</div></div>
+                {% else %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:green;">Good</div></div>
+                {% endif %}
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:left">Dividend Payout</div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.dividend_payout_ratio }} %</div></div>
+                {% if companyfilter.dividend_payout_ratio < 140 %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:red;">Not Good</div></div>
+                {% else %}
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><div style="background-color:green;">Good</div></div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    </div>
+
+    <div class="row text-center" style="margin-top:30px;">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div style="width:100%; height:100%; border:2px solid white; background-color:white; border-radius: 5px; padding:2%">
+              <h4 style="margin-bottom:20px;">Turnover Ratio</h4>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="text-align:left">Total Asset Turnover</div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.total_asset_turnover }}</div></div>
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="text-align:left">Working Capital Turnover</div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.working_capital_turnover }}</div></div>
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="text-align:left">Fixed Aset Turnover</div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.fixed_asset_turnover }}</div></div>
+              </div>
+              <div class="row" style="padding:1%">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="text-align:left">Inventory Turnover</div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{{ companyfilter.inventory_turnover }}</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"></div>
+        </div>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    </div>
+
+    {% endfor%}
+
+  </div>
+
+</div>
 
 {% endblock %}

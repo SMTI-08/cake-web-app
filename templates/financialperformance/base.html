@@ -22,6 +22,9 @@
     <!-- CSS by Cake -->
     <link href="{% static 'css/cake.css' %}" rel="stylesheet" type="text/css">
 
+    <!-- Select2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+
     <style>
       * {
         margin: 0;
@@ -131,6 +134,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+    <!-- Select2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
     <!-- Sidenav -->
     <script>
       function openNav() {
@@ -143,6 +149,16 @@
         document.getElementById("main").style.marginLeft= "0";
         document.body.style.backgroundColor = "#DBDBE0";
       }
+    </script>
+
+    <!-- Select2 -->
+    <script>
+      $(document).ready(function() {
+        $('.js-example-basic-multiple').select2({placeholder: "Search company by name or code or sector"});
+      });
+      $(document).ready(function() {
+        $('.js-example-basic-single').select2({placeholder: "Search company by name or code or sector",});
+      });
     </script>
 
   </body>
