@@ -16,6 +16,28 @@ def main_dashboard_view(request):
     return render(request, template, context)
 
 
+def company_dashboard_view(request):
+    companydata = Company.objects.all()
+    sectordata = CompanySector.objects.all()
+    context = {
+        "companydata": companydata,
+        "sectordata": sectordata,
+    }
+    template = 'financialperformance/company_dashboard.html'
+    return render(request, template, context)
+
+
+def sector_dashboard_view(request):
+    companydata = Company.objects.all()
+    sectordata = CompanySector.objects.all()
+    context = {
+        "companydata": companydata,
+        "sectordata": sectordata,
+    }
+    template = 'financialperformance/sector_dashboard.html'
+    return render(request, template, context)
+
+
 def company_analysis_view(request):
     financialdata = FinancialStatement.objects.all()
     if 'q' in request.GET:
