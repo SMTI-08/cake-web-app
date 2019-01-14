@@ -5,6 +5,17 @@ from django.db.models import Q
 
 # Create your views here.
 
+def main_dashboard_view(request):
+    companydata = Company.objects.all()
+    sectordata = CompanySector.objects.all()
+    context = {
+        "companydata": companydata,
+        "sectordata": sectordata,
+    }
+    template = 'financialperformance/main_dashboard.html'
+    return render(request, template, context)
+
+
 def company_analysis_view(request):
     financialdata = FinancialStatement.objects.all()
     if 'q' in request.GET:
