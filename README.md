@@ -63,7 +63,8 @@ Berikut adalah daftar rincian dokumentasi singkat dari proyek CAKe berbasis Web 
 <p align="center">
   <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/timeline cake.JPG">
 </p>
-<p>Keterangan :</p>
+
+Keterangan :
 - Diskusi dengan Stakeholder. Pada tahap ini dilakukan wawancara dengan stakeholder untuk mengetahui tujuan dan keinginan stakeholder terhadap sistem yang akan dikembangkan.
 - Riset Pemilihan Metode RAD. Pada tahap ini dilakukan riset untuk memutuskan metode yang tepat untuk pengembangan sistem. Pemilihan metode didasarkan pada data-data yang dihasilkan pada tahap diskuis dengan stakeholder.
 - Analisis Kebutuhan. Pada tahap ini dilakukan analisis terhadap kebutuhan dalam pengembangan sistem berdasarkan data yang dihasilkan dari hasil diskusi dengan stakeholder.
