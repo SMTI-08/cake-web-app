@@ -5,17 +5,15 @@
 </p>
 
 Berikut adalah daftar rincian dokumentasi singkat dari proyek CAKe berbasis Web :
-<ul>
-  <li><a href=#description>Deskripsi</a></li>
-  <li><a href=#todo>Daftar Pekerjaan</a></li>
-  <li><a href=#project_timeline>Timeline Pengerjaan Proyek</a></li>
-  <li><a href=#budget_plan>Rencana Anggaran Biaya</a></li>
-  <li><a href=#functional_analysis>Analisis Fungsionalitas</a></li>
-  <li><a href=#interface_design>Desain Antarmuka</a></li>
-  <li><a href=#database_design>Desain Database</a></li>
-  <li><a href=#implementation>Implementsi</a></li>
-  <li><a href=#testing>Pengujian</a></li>
-</ul>  
+- <a href=#description>Deskripsi</a></li>
+- <a href=#todo>Daftar Pekerjaan</a></li>
+- <a href=#project_timeline>Timeline Pengerjaan Proyek</a></li>
+- <a href=#budget_plan>Rencana Anggaran Biaya</a></li>
+- <a href=#functional_analysis>Analisis Fungsionalitas</a></li>
+- <a href=#interface_design>Desain Antarmuka</a></li>
+- <a href=#database_design>Desain Database</a></li>
+- <a href=#implementation>Implementsi</a></li>
+- <a href=#testing>Pengujian</a></li> 
 
 <h3 id="description">Deskripsi</h3>
 <p align="justify">Cake merupakan suatu wadah dalam bentuk aplikasi web untuk membantu para investor melakukan analisis untuk mengambil keputusan dalam menanamkan modal disuatu saham perusahaan. Aplikasi ini ditujukan untuk user yang berperan sebagai investor saham jangka panjang. Fitur utama pada aplikasi ini adalah analisis dengan menggunakan salah satu metode analisis fundamental yaitu analisis kinerja keuangan tahunan. Analisis kinerja keuangan terdiri dari dua tipe yaitu analisis kinerja keuangan secara individu perusahaan dan analisis perbandingan kinerja keuangan antar perusahaan. Data yang digunakan pada aplikasi ini berasal dari laporan keuangan tahunan 45 perusahaan di Indonesia yang masuk daftar indeks LQ45 dari sembilan sektor.</p>
@@ -60,3 +58,11 @@ Berikut adalah daftar rincian dokumentasi singkat dari proyek CAKe berbasis Web 
     - [ ] Membuat multiselect form untuk memilih 2 perusahaan atau lebih untuk dibandingkan
     - [ ] Menampilkan data rasio hasil perbandingan dalam bentuk diagram batang
     - [ ] Memberikan ambang batasan (*threshold*) ratio untuk setiap diagram
+
+<h3 id="project_timeline">Timeline Pengerjaan Proyek</h3>
+<h3 id="budget_plan">Rencana Anggaran Biaya</h3>
+<h3 id="functional_analysis">Analisis Fungsionalitas</h3>
+<h3 id="interface_design">Desain Antarmuka</h3>
+<h3 id="database_design">Desain Database</h3>
+<h3 id="implementation">Implementsi</h3>
+<h3 id="testing">Pengujian</h3>
