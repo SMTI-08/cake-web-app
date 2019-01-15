@@ -7,7 +7,12 @@
 Berikut adalah daftar rincian dokumentasi singkat dari proyek CAKe berbasis Web :
 <ul>
   <li><a href=#description>Description</a></li>
-  <li><a href=#todo>Description</a></li>
+  <li><a href=#todo>To-dos</a></li>
+  <li><a href=#project_timeline>Project Timeline</a></li>
+  <li><a href=#budget_plan>Budget Plan</a></li>
+  <li><a href=#functional_analysis>Functional Analysis</a></li>
+  <li><a href=#interface_design>Interface Design</a></li>
+  <li><a href=#database_design>Database Design</a></li>
 </ul>  
 
 <h3 id="description">Description</h3>
