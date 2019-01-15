@@ -82,11 +82,12 @@ Implementasi. Pada tahap ini dilakukan implementasi dan testing terhadap sistem 
 <p align="center">
   <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/RACI Matrix.JPG">
 </p>
+
 Keterangan :
-- R-Responsible. Pihak yang bertanggung jawab untuk mengerjakan  aktivitas tersebut.
-- A-Accountable. Pihak yang bertanggung jawab untuk memastikan penyelesaian pekerjaan dan menyetujui hasil suatu pekerjaan.
-- C-Consulted. Pihak yang dimintai saran dan pendapat tentang suatu pekerjaan yang sedang dikerjakan.
-- I–Informed. Pihak yang akan diinformasikan terhadap perkembangan terbaru dari suatu pekerjaan.
+- R = Responsible. Pihak yang bertanggung jawab untuk mengerjakan  aktivitas tersebut.
+- A = Accountable. Pihak yang bertanggung jawab untuk memastikan penyelesaian pekerjaan dan menyetujui hasil suatu pekerjaan.
+- C = Consulted. Pihak yang dimintai saran dan pendapat tentang suatu pekerjaan yang sedang dikerjakan.
+- I = Informed. Pihak yang akan diinformasikan terhadap perkembangan terbaru dari suatu pekerjaan.
 
 <h3 id="budget_plan">Rencana Anggaran Biaya</h3>
 <p align="center">
