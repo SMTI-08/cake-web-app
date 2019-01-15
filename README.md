@@ -108,7 +108,35 @@ Keterangan :
 
 <h3 id="interface_design">Desain Antarmuka</h3>
 
+- Dashboard Awal
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Dashboard Awal.png">
+</p>
+
+- Dashboard Company
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Dashboard Company.png">
+</p>
+
+- Dashboard Sector
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Dashboard Sector.png">
+</p>
+
+- Financial Performance
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Financial Performance.png">
+</p>
+
+- Comparison Financial Performance
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Comparison Financial Performance.png">
+</p>
+
 <h3 id="database_design">Desain Database</h3>
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/db design.png">
+</p>
 
 <h3 id="implementation">Implementsi</h3>
 
