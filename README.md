@@ -47,16 +47,16 @@ Berikut adalah daftar rincian dokumentasi singkat dari proyek CAKe berbasis Web 
   - [x] Membuat database *(3 - 5 Januari 2019)*
   - [x] Membuat fungsi untuk perhitungan *financial performance ratio (6 Januari 2019)*
   - [x] Membuat fungsi untuk menampikan data *(8 Januari 2019)*
-  - [ ] Implementasi tampilan Dashboard *()*
+  - [ ] Implementasi tampilan Dashboard *(14 Januari 2019)*
     - [ ] Menampilkan informasi aplikasi
     - [ ] Menampilkan daftar sektor
     - [ ] Menampilkan daftar perusahaan
-  - [ ] Implementasi tampilan Analisis Kinerja Keuangan Perusahaan *()*
+  - [ ] Implementasi tampilan Analisis Kinerja Keuangan Perusahaan *(11 - 14 Januari 2019)*
     - [ ] Membuat select form untuk memilih 1 perusahaan untuk dianalisis
     - [ ] Menampilkan data financial performance variable
     - [ ] Menampilkan data ratio hasil analisis
     - [ ] Memberikan batasan dan keputusan terhadap hasil analisis
-  - [ ] Implementasi tampilan Perbandingan kinerja keuangan perusahaan *()*
+  - [ ] Implementasi tampilan Perbandingan kinerja keuangan perusahaan *(13 - 14 Januari 2019)*
     - [ ] Membuat multiselect form untuk memilih 2 perusahaan atau lebih untuk dibandingkan
     - [ ] Menampilkan data rasio hasil perbandingan dalam bentuk diagram batang
     - [ ] Memberikan ambang batasan (*threshold*) ratio untuk setiap diagram
