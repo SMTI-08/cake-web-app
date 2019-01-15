@@ -34,17 +34,17 @@ Berikut adalah daftar rincian dokumentasi singkat dari proyek CAKe berbasis Web 
 *(28 Desember 2018 - 17 Januari 2019)*
 - Desain
   - [x] Membuat design database *(28 Desember 2018 - 5 Januari 2019)*
-  - [ ] Membuat design interface :
-    - [ ] Dashboard *()*
-    - [ ] Analisis Kinerja Keuangan Perusahaan *()*
-    - [ ] Perbandingan kinerja keuangan perusahaan *()*
+  - [x] Membuat design interface :
+    - [x] Dashboard *(9 - 14 Januari)*
+    - [x] Analisis Kinerja Keuangan Perusahaan *(9 - 14 Januari)*
+    - [x] Perbandingan kinerja keuangan perusahaan *(9 - 14 Januari)*
 
 - Implementasi
   - [x] Membuat *environment (1 Januari 2019)* 
   - [x] Membuat *project (1 Januari 2019)*
   - [x] Membuat aplikasi *(1 Januari 2019)*
   - [x] *Setting application* ke *project (1 Januari 2019)*
-  - [x] Membuat database *(3 Januari 2019)*
+  - [x] Membuat database *(3 - 5 Januari 2019)*
   - [x] Membuat fungsi untuk perhitungan *financial performance ratio (6 Januari 2019)*
   - [x] Membuat fungsi untuk menampikan data *(8 Januari 2018)*
   - [ ] Implementasi tampilan Dashboard *()*
