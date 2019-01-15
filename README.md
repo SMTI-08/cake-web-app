@@ -60,6 +60,10 @@ Berikut adalah daftar rincian dokumentasi singkat dari proyek CAKe berbasis Web 
     - [ ] Memberikan ambang batasan (*threshold*) ratio untuk setiap diagram
 
 <h3 id="project_timeline">Timeline Pengerjaan Proyek</h3>
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/timeline cake.JPG" alt="Timeline Pengerjaan Proyek">
+</p>
+
 <h3 id="budget_plan">Rencana Anggaran Biaya</h3>
 <h3 id="functional_analysis">Analisis Fungsionalitas</h3>
 <h3 id="interface_design">Desain Antarmuka</h3>
