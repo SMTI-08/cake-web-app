@@ -13,6 +13,8 @@ Berikut adalah daftar rincian dokumentasi singkat dari proyek CAKe berbasis Web 
   <li><a href=#functional_analysis>Analisis Fungsionalitas</a></li>
   <li><a href=#interface_design>Desain Antarmuka</a></li>
   <li><a href=#database_design>Desain Database</a></li>
+  <li><a href=#implementation>Implementsi</a></li>
+  <li><a href=#testing>Pengujian</a></li>
 </ul>  
 
 <h3 id="description">Deskripsi</h3>
@@ -30,23 +32,31 @@ Berikut adalah daftar rincian dokumentasi singkat dari proyek CAKe berbasis Web 
 - [x] Membuat Rencana Anggaran Biaya proyek
 
 *(28 Desember 2018 - 17 Januari 2019)*
-- Design
+- Desain
   - [x] Membuat design database *(28 Desember 2018 - 5 Januari 2019)*
   - [ ] Membuat design interface :
-    - [ ] Dashboard
-    - [ ] Company Data Analysis
-    - [ ] Company Data Compare
+    - [ ] Dashboard *()*
+    - [ ] Analisis Kinerja Keuangan Perusahaan *()*
+    - [ ] Perbandingan kinerja keuangan perusahaan *()*
 
-- Implementation
-  - [x] Melakukan implementasi literasi
-  - [x] Create environment
-  - [x] Create project
-  - [x] Create applikasi
-  - [x] Setting applikasi to project
-  - [x] Create database
-  - [x] Create function to calculate financial performance variable
-  - [x] Create function to display data
-  - [x] Display data on Chart
-  - [ ] Implementasi tampilan Dashboard
-  - [ ] Implementasi tampilan Company Data Analysis
-  - [ ] Implementasi tampilan Company Data Compare
+- Implementasi
+  - [x] Membuat *environment (1 Januari 2019)* 
+  - [x] Membuat *project (1 Januari 2019)*
+  - [x] Membuat aplikasi *(1 Januari 2019)*
+  - [x] *Setting application* ke *project (1 Januari 2019)*
+  - [x] Membuat database *(3 Januari 2019)*
+  - [x] Membuat fungsi untuk perhitungan *financial performance ratio (6 Januari 2019)*
+  - [x] Membuat fungsi untuk menampikan data *(8 Januari 2018)*
+  - [ ] Implementasi tampilan Dashboard *()*
+    - [ ] Menampilkan informasi aplikasi
+    - [ ] Menampilkan daftar sektor
+    - [ ] Menampilkan daftar perusahaan
+  - [ ] Implementasi tampilan Analisis Kinerja Keuangan Perusahaan *()*
+    - [ ] Membuat select form untuk memilih 1 perusahaan untuk dianalisis
+    - [ ] Menampilkan data financial performance variable
+    - [ ] Menampilkan data ratio hasil analisis
+    - [ ] Memberikan batasan dan keputusan terhadap hasil analisis
+  - [ ] Implementasi tampilan Perbandingan kinerja keuangan perusahaan *()*
+    - [ ] Membuat multiselect form untuk memilih 2 perusahaan atau lebih untuk dibandingkan
+    - [ ] Menampilkan data rasio hasil perbandingan dalam bentuk diagram batang
+    - [ ] Memberikan ambang batasan (*threshold*) ratio untuk setiap diagram
