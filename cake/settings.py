@@ -25,7 +25,7 @@ SECRET_KEY = 'xpb6*2uyp+80(5j1=58y$rl13s44be$sq%9+v)p5^f8n)c&o0z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*','cakedev.pythonanywhere.com']
 
 
 # Application definition
