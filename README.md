@@ -84,8 +84,19 @@ Implementasi. Pada tahap ini dilakukan implementasi dan testing terhadap sistem 
 </p>
 
 <h3 id="budget_plan">Rencana Anggaran Biaya</h3>
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Anggaran1.JPG">
+</p>
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Anggaran2.JPG">
+</p>
+
 <h3 id="functional_analysis">Analisis Fungsionalitas</h3>
+
 <h3 id="interface_design">Desain Antarmuka</h3>
+
 <h3 id="database_design">Desain Database</h3>
+
 <h3 id="implementation">Implementsi</h3>
+
 <h3 id="testing">Pengujian</h3>
