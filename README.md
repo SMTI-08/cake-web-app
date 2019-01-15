@@ -61,7 +61,12 @@ Berikut adalah daftar rincian dokumentasi singkat dari proyek CAKe berbasis Web 
 
 <h3 id="project_timeline">Timeline Pengerjaan Proyek</h3>
 <p align="center">
-  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/timeline cake.JPG" alt="Timeline Pengerjaan Proyek">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/timeline cake.JPG">
+</p>
+
+<h4>Rincian Timeline Pengerjaan Proyek</h4>
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/rincian kegiatan.JPG">
 </p>
 
 <h3 id="budget_plan">Rencana Anggaran Biaya</h3>
