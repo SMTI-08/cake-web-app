@@ -103,6 +103,26 @@ Keterangan :
 
 <h3 id="functional_analysis">Analisis Fungsionalitas</h3>
 <p align="justify">Kebutuhan fungsionalitas pada aplikasi ini berupa analisis kinerja keuangan perusahaan yang dapat menunjukkan kepada para investor perusahaan mana saja yang bisa dilakukan investasi ke depannya. Analisis kinerja keuangan yang digunakan terdiri dari dua tipe yaitu kinerja keuangan secara individu perusahaan dan perbandingan kinerja keuangan antar perusahaan. Jadi, untuk fitur utama pada web ini ada 2 yaitu fitur Kinerja Perusahaan dan fitur Perbandingan Kinerja antar Perusahaan. Pada fitur Kinerja Perusahaan, ada kolom pencarian untuk mencari perusahaan berdasarkan nama/kode/sektor perusahaannya. Pada fitur ini juga ada informasi berupa nilai dari 18 variabel perhitungan kinerja perusahaan berdasarkan perusahaan yang sudah dipilih pada kolom perusahaan sebelumnya. Selain berguna untuk informasi, ke-18 variabel juga berguna untuk perhitungan kinerja perusahaan yang bisa dibagi lagi menjadi 5 Rasio, yaitu Liquidity Ratio, Solvability Ratio, Profitability Ratio, Market Ratio dan Turnover Ratio. Pada fitur ini juga tersedia tombol untuk memulai proses perhitungan kinerja perusahaan. Setelah tombol “Proses” ditekan, maka hasil perhitungan kinerjanya bisa dilihat pada kolom 5 rasio yang sudah disebutkan tadi. Hasil perhitungannya berupa angka dan indikator warna hijau dan warna merah. Warna hijau untuk hasil yang bagus dan warna merah untuk hasil yang tidak bagus. Penentuan warna ditentukan berdasarkan batas angka pada setiap perhitungan rasionya.</p>
+Berikut adalah batas angka pada setiap perhitungan rasio :
+
+1. **Liquidity Ratio**. Angka yang dianggap baik adalah angka yang lebih dari 100%.
+2. **Solvability Ratio**
+   - **Debt to Asset**. Angka yang dianggap baik adalah angka yang kurang dari 100%.
+   - **Debt to Equity**. Angka yang dianggap baik adalah angka yang kurang dari 100%.
+   - **Long Term Debt to Equity**. Angka yang dianggap baik adalah angka yang kurang dari 100%.
+   - **Coverage Ratio**. Angka yang dianggap baik adalah angka yang kurang dari 150%.
+3. **Profitability Ratio**
+   - **Return On Equity**. Angka yang dianggap baik adalah angka yang lebih dari 25%.
+   - **Return On Asset**. Angka yang dianggap baik adalah angka yang lebih dari 5%.
+   - **Gross Profit Margin**. Angka yang dianggap baik adalah angka yang lebih dari 50%.
+   - **Operating Profit Margin**. Angka yang dianggap baik adalah angka yang lebih dari 30%.
+   - **Net Profit Margin**. Angka yang dianggap baik adalah angka yang lebih dari 10%.
+4. **Market Ratio**
+   - **Price Earning Ratio**. Jika kurang dari 10 dikatakan “Cheap” dan lebih dari 10 dikatakan “Expensive”.
+   - **Price to Book Value**. Nilai 1.0 adalah ambang batasnya, yang berarti jika kurang dari 1.0 maka disebut “Undervalued” sedangkan  lebih dari 1.0 disebut “Overvalued”.
+   - **Dividend Yield**. Semakin besar nilai Dividend Yield maka semakin baik. Kemudian, apabila nilai tersebut ada pertumbuhan dari nilai pada tahun sebelumnya maka dapat dikatakan baik/bagus. Jadi, bagus atau tidaknya tergantung pada pertumbuhannya.
+   - **Dividend Payout Ratio**. Angka yang dianggap baik adalah angka yang lebih dari 50%.
+
 <p align="justify">Selain fitur kinerja perusahaan, pada web ini juga terdapat fitur perbandingan. Perbandingan di sini adalah perbandingan kinerja antar perusahaan, mana yang memiliki kinerja yang baik dan mana yang memiliki kinerja yang buruk. Pada fitur ini terdapat kolom perusahaan yang akan dibandingkan. Berbeda dengan fitur sebelumnya, pada fitur ini hanya terdapat 11 variabel. Kemudian, variabel tersebut akan menghasilkan beberapa rasio, seperti Current Ratio, Debt to Equity Ratio, Return on Equity, Operating Profit Margin, Net Profit Margin, Price Earning Ratio, dan Dividend Yield. Rasio-rasio tersebut akan berupa grafik batang dengan ambang batas dan warna indikator sama seperti pada fitur sebelumnya. Arti dari warna indikator juga sama seperti pada fitur sebelumnya yaitu, warna merah untuk hasil yang kurang dari ambang batas berarti tidak bagus dan warna hijau untuk hasil lebih dari ambang batas berarti bagus. Kemudian, untuk menentukan bagus tidaknya digunakan perhitungan seperti yang sudah dijelaskan di atas. Setiap perusahaan yang dibandingkan memiliki hasil rasio dan warna indikatornya masing-masing dan dari grafik dan warna indikator pengguna bisa menyimpulkan bahwa perusahaan mana yang lebih baik kinerjanya. </p>
 <p align="justify"> Selain kedua fitur di atas, pada sistem ini juga diberikan informasi perusahaan terkait data perusahaan agar pengguna dapat melihat perusahaan yang akan dipilih untuk berinvestasi secara mendalam. Datanya berupa deskripsi perusahaan yang terdaftar pada sistem ini.</p>
 
