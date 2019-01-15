@@ -63,10 +63,23 @@ Berikut adalah daftar rincian dokumentasi singkat dari proyek CAKe berbasis Web 
 <p align="center">
   <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/timeline cake.JPG">
 </p>
+<p>Keterangan :</p>
+- Diskusi dengan Stakeholder. Pada tahap ini dilakukan wawancara dengan stakeholder untuk mengetahui tujuan dan keinginan stakeholder terhadap sistem yang akan dikembangkan.
+- Riset Pemilihan Metode RAD. Pada tahap ini dilakukan riset untuk memutuskan metode yang tepat untuk pengembangan sistem. Pemilihan metode didasarkan pada data-data yang dihasilkan pada tahap diskuis dengan stakeholder.
+- Analisis Kebutuhan. Pada tahap ini dilakukan analisis terhadap kebutuhan dalam pengembangan sistem berdasarkan data yang dihasilkan dari hasil diskusi dengan stakeholder.
+- Desain. Pada tahap ini dilakukan perancangan terhadap sistem yang akan dikembangkan berdasarkan hasil tahap analisis kebutuhan. Perancangan dilakukan terhadap desain UI/UX dan desain Database.
+Implementasi. Pada tahap ini dilakukan implementasi dan testing terhadap sistem berdasarkan hasil dari tahap desain ke dalam pembuatan kode.
+- Deployment. Pada tahap ini dilakukan penyebaran sistem yang sudah jadi menggunakan layanan hosting dan dilakukan training terhadap stakeholder mengenai penggunakan sistem.
+- Evaluasi. Tahap terakhir adalah melakukan evaluasi terhadap testing yang telah dilakukan guna mengetahui apakah aplikasi yang dibuat berjalan sesuai fungsinya dan memenuhi keinginan dari stakeholder.
 
 <h4>Rincian Timeline Pengerjaan Proyek</h4>
 <p align="center">
   <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/rincian kegiatan.JPG">
+</p>
+
+<h4>Matriks RACI</h4>
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/RACI Matrix.JPG">
 </p>
 
 <h3 id="budget_plan">Rencana Anggaran Biaya</h3>
