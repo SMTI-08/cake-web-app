@@ -15,6 +15,9 @@ class Company(models.Model):
     company_code = models.CharField(primary_key=True, max_length=10)
     company_name = models.CharField(max_length=50)
     company_desc = models.TextField(null=True,blank=True)
+    company_url = models.URLField()
+    company_logo = models.ImageField(null=True,blank=True)
+
 
     def __str__(self):
         return '%s'%(self.company_name)
