@@ -5,19 +5,19 @@ from django.db import models
 class CompanySector(models.Model):
     sector_code = models.CharField(primary_key=True, max_length=10)
     sector_name = models.CharField(max_length=50)
-    sector_desc = models.TextField()
+    sector_desc = models.TextField(null=True,blank=True)
 
     def __str__(self):
-        return '%s %s'%(self.sector_code, self.sector_name)
+        return '%s'%(self.sector_name)
 
 class Company(models.Model):
     company_sector = models.ForeignKey(CompanySector, related_name='fk_companysectors_to_company', on_delete=models.CASCADE)
     company_code = models.CharField(primary_key=True, max_length=10)
     company_name = models.CharField(max_length=50)
-    company_desc = models.TextField()
+    company_desc = models.TextField(null=True,blank=True)
 
     def __str__(self):
-        return '%s %s'%(self.company_code, self.company_name)
+        return '%s'%(self.company_name)
 
 
 class FinancialStatement(models.Model):
