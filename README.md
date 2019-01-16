@@ -45,19 +45,19 @@ Berikut adalah daftar rincian dokumentasi singkat dari proyek CAKe berbasis Web 
   - [x] Membuat database *(3 - 5 Januari 2019)*
   - [x] Membuat fungsi untuk perhitungan *financial performance ratio (6 Januari 2019)*
   - [x] Membuat fungsi untuk menampikan data *(8 Januari 2019)*
-  - [ ] Implementasi tampilan Dashboard *(14 Januari 2019)*
-    - [ ] Menampilkan informasi aplikasi
-    - [ ] Menampilkan daftar sektor
-    - [ ] Menampilkan daftar perusahaan
-  - [ ] Implementasi tampilan Analisis Kinerja Keuangan Perusahaan *(11 - 14 Januari 2019)*
-    - [ ] Membuat select form untuk memilih 1 perusahaan untuk dianalisis
-    - [ ] Menampilkan data financial performance variable
-    - [ ] Menampilkan data ratio hasil analisis
-    - [ ] Memberikan batasan dan keputusan terhadap hasil analisis
-  - [ ] Implementasi tampilan Perbandingan kinerja keuangan perusahaan *(13 - 14 Januari 2019)*
-    - [ ] Membuat multiselect form untuk memilih 2 perusahaan atau lebih untuk dibandingkan
-    - [ ] Menampilkan data rasio hasil perbandingan dalam bentuk diagram batang
-    - [ ] Memberikan ambang batasan (*threshold*) ratio untuk setiap diagram
+  - [x] Implementasi tampilan Dashboard *(14 Januari 2019)*
+    - [x] Menampilkan informasi aplikasi
+    - [x] Menampilkan daftar sektor
+    - [x] Menampilkan daftar perusahaan
+  - [x] Implementasi tampilan Analisis Kinerja Keuangan Perusahaan *(11 - 14 Januari 2019)*
+    - [x] Membuat select form untuk memilih 1 perusahaan untuk dianalisis
+    - [x] Menampilkan data financial performance variable
+    - [x] Menampilkan data ratio hasil analisis
+    - [x] Memberikan batasan dan keputusan terhadap hasil analisis
+  - [x] Implementasi tampilan Perbandingan kinerja keuangan perusahaan *(13 - 14 Januari 2019)*
+    - [x] Membuat multiselect form untuk memilih 2 perusahaan atau lebih untuk dibandingkan
+    - [x] Menampilkan data rasio hasil perbandingan dalam bentuk diagram batang
+    - [x] Memberikan ambang batasan (*threshold*) ratio untuk setiap diagram
   - [ ] Implementasi Real Data *()*
     - [ ] Menambahkan data sektor, perusahaan dan laporan keuangan
     - [ ] Menambahkan data nilai batasan pada analisis dan perbandingan
