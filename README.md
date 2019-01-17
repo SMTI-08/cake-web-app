@@ -135,12 +135,12 @@ Berikut adalah batas angka pada setiap perhitungan rasio :
 
 - Dashboard Company
 <p align="center">
-  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Dashboard Company.png">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Dashboard Company2.png">
 </p>
 
 - Dashboard Sector
 <p align="center">
-  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Dashboard Sector.png">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Dashboard Sector2.png">
 </p>
 
 - Financial Performance
