@@ -155,7 +155,7 @@ Berikut adalah batas angka pada setiap perhitungan rasio :
 
 <h3 id="database_design">Desain Database</h3>
 <p align="center">
-  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/db cake baru.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/db cake new.JPG">
 </p>
 
 <h3 id="implementation">Implementsi</h3>
