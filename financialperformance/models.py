@@ -41,7 +41,7 @@ class FinancialStatement(models.Model):
     operating_profit = models.BigIntegerField()
     interest_expense = models.BigIntegerField()
     net_profit = models.BigIntegerField()
-    earnings_per_share = models.IntegerField()
+    earnings_per_share = models.DecimalField(max_digits=6, decimal_places=5)
     dividend_payment = models.BigIntegerField()
     stock_price = models.IntegerField()
     exchange_rate_rupiah_dollar = models.IntegerField()
