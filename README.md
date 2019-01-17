@@ -150,7 +150,7 @@ Berikut adalah batas angka pada setiap perhitungan rasio :
 
 - Comparison Financial Performance
 <p align="center">
-  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Comparison Financial Performance.png">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Comparison Financial Performance (2).png">
 </p>
 
 <h3 id="database_design">Desain Database</h3>
