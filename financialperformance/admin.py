@@ -4,7 +4,7 @@ from .models import CompanySector, Company, FinancialStatement
 # Register your models here.
 
 class CompanySectorAdmin(admin.ModelAdmin):
-    list_display = ['sector_name','sector_code','sector_desc']
+    list_display = ['sector_name','sector_code','sector_desc','sector_image']
     list_per_page = 25
 
     def get_queryset(self, request):

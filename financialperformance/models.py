@@ -6,6 +6,7 @@ class CompanySector(models.Model):
     sector_code = models.CharField(primary_key=True, max_length=10)
     sector_name = models.CharField(max_length=50)
     sector_desc = models.TextField(null=True,blank=True)
+    sector_image = models.ImageField(null=True,blank=True)
 
     def __str__(self):
         return '%s'%(self.sector_name)
