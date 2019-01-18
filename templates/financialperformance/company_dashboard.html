@@ -50,14 +50,38 @@
         </div>
       </div>
     </div>
-
+    {% for companylist in companylist %}
     <div class="row" style="padding:10px;">
-      <div style="width:100%; height:500px; border:2px solid white; background-color:white; border-radius: 5px; padding:1%;">
-        <div style="width:100%; height:50px; border:2px solid white; background-color:#f39c12; border-radius: 5px;">
-          <h3 style="color:white; margin-left:20px;"><strong>COMPANY</strong></h3>
+      <div style="width:100%; height:100%; border:2px solid white; background-color:white; border-radius: 5px;">
+        <div style="width:50px; height:50px; border:2px solid white; background-color:#f39c12; border-radius: 5px;">
+          <h3 style="color:white; text-align:center"><strong>{{ forloop.counter }}</strong></h3>
+        </div>
+        <div style="text-align:center">
+          <h5><strong> {{ companylist.company_name|upper }} </strong></h5>
+        </div>
+        <div class="row" style="padding:10px; margin-bottom:20px;">
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align:center"><img src="{{ companylist.company_logo.url }}" style="width:200px; text-align:center"></img></div>
+          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"></div>
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
         </div>
       </div>
     </div>
+    {% endfor %}
+
+    <ul class="pagination pagination-lg justify-content-center" style="margin-top:40px;">
+      {% if companylist.has_previous %}
+        <li class="page-item"><a class="page-link" href="?page=1">&laquo;</a></li>
+        <li class="page-item"><a class="page-link" href="?page={{ companylist.previous_page_number }}">Previous</a></li>
+      {% endif %}
+
+      <li class="page-item active"><a class="page-link" href="#">Page {{ companylist.number }} of {{ companylist.paginator.num_pages }}</a></li>
+
+      {% if companylist.has_next %}
+       <li class="page-item"><a class="page-link" href="?page={{ companylist.next_page_number }}">Next</a></li>
+       <li class="page-item"><a class="page-link" href="?page={{ companylist.paginator.num_pages }}">&raquo;</a></li>
+      {% endif %}
+    </ul>
 
   </diV>
 

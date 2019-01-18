@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import CompanySector, Company, FinancialStatement
 from django.db.models import Q
+from django.core.paginator import Paginator
 
 # Create your views here.
 
@@ -17,9 +18,15 @@ def main_dashboard_view(request):
 
 
 def company_dashboard_view(request):
-    companydata = Company.objects.all()
     sectordata = CompanySector.objects.all()
+
+    companydata = Company.objects.all()
+    paginator = Paginator(companydata, 5)
+    page = request.GET.get('page')
+    companylist = paginator.get_page(page)
+
     context = {
+        "companylist":companylist,
         "companydata": companydata,
         "sectordata": sectordata,
     }
