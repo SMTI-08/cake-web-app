@@ -50,10 +50,23 @@
         </div>
       </div>
     </div>
+
+    <div class="row" style="margin-top:30px; margin-bottom:30px;">
+      <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9"></div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        <div class="row inline-block" style="float:right; padding-right:10px;">
+          <div style="width:50px; height:70px; background-color:#FBC531; text-align:center"></div>
+          <div style="width:300px; height:70px; background-color:#00E9F8; text-align:center">
+            <h3 style="color:#F5F6FA; font-famili:roboto; font-weight:bold; font-size:38px">COMPANY</H3>
+          </div>
+        </div>
+      </div>
+    </div>
+
     {% for companylist in companylist %}
     <div class="row" style="padding:10px;">
       <div style="width:100%; height:100%; border:2px solid white; background-color:white; border-radius: 5px;">
-        <div style="width:50px; height:50px; border:2px solid white; background-color:#f39c12; border-radius: 5px;">
+        <div style="width:50px; height:50px; border:2px solid white; {% if forloop.counter == 1 %} background-color:#FBC531 {% elif forloop.counter == 2 %} background-color:#487EB0 {% elif forloop.counter == 3 %} background-color:#E84118 {% elif forloop.counter == 4 %} background-color:#05c46b {% else %} background-color:#4bcffa {% endif %}; border-radius: 5px;">
           <h3 style="color:white; text-align:center"><strong>{{ forloop.counter }}</strong></h3>
         </div>
         <div style="text-align:center">
