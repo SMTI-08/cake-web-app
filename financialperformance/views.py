@@ -36,8 +36,14 @@ def company_dashboard_view(request):
 
 def sector_dashboard_view(request):
     companydata = Company.objects.all()
+
     sectordata = CompanySector.objects.all()
+    paginator = Paginator(sectordata, 5)
+    page = request.GET.get('page')
+    sectorlist = paginator.get_page(page)
+
     context = {
+        "sectorlist": sectorlist,
         "companydata": companydata,
         "sectordata": sectordata,
     }

@@ -51,13 +51,53 @@
       </div>
     </div>
 
+    <div class="row" style="margin-top:30px; margin-bottom:30px;">
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <div class="row" style="padding-left:50px; padding-right:50px;">
+          <div style="width:100%; height:50px; background-color:#00E9F8; text-align:center">
+            <h3 style="color:#F5F6FA; font-famili:roboto; font-weight:bold; font-size:36px; margin:0px;">SECTOR</H3>
+              <div style="width:100%; height:10px; background-color:#FBC531; text-align:center"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+    </div>
+
+
+    {% for sectorlist in sectorlist %}
     <div class="row" style="padding:10px;">
-      <div style="width:100%; height:500px; border:2px solid white; background-color:white; border-radius: 5px; padding:1%;">
-        <div style="width:100%; height:50px; border:2px solid white; background-color:#16a085; border-radius: 5px;">
-          <h3 style="color:white; margin-left:20px;"><strong>SECTOR</strong></h3>
+      <div style="width:100%; height:100%; border:2px solid white; background-color:white; border-radius: 5px;">
+        <div style="width:100%x; height:50px; border:2px solid white;{% if sectorlist.sector_code == 'AGRI' %} background-color:#badc58 {% elif sectorlist.sector_code == 'BSIC' %} background-color:#ff7979 {% elif sectorlist.sector_code == 'CNGI' %} background-color:#FDCB6E
+        {% elif sectorlist.sector_code == 'FNCE' %} background-color:#AA1923 {% elif sectorlist.sector_code == 'IUTR' %} background-color:#7ed6df {% elif sectorlist.sector_code == 'MNIG' %} background-color:#44BD32
+        {% elif sectorlist.sector_code == 'MSIN' %} background-color:#95afc0 {% elif sectorlist.sector_code == 'PRBC' %} background-color:#eb4d4b
+        {% else %} background-color:#f9ca24 {% endif %}; border-radius: 5px;">
+          <h3 style="color:white; text-align:left; margin-left:20px; font-size:24;"><strong>{{ sectorlist.sector_name|upper }}</strong></h3>
+        </div>
+        <div class="row" style="padding:10px; margin-bottom:20px;">
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"></div>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align:center"><img src="#" style="width:200px; text-align:center"></img></div>
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
         </div>
       </div>
     </div>
+    {% endfor %}
+
+    <ul class="pagination pagination-lg justify-content-center" style="margin-top:40px;">
+      {% if sectorlist.has_previous %}
+        <li class="page-item"><a class="page-link" href="?page=1">&laquo;</a></li>
+        <li class="page-item"><a class="page-link" href="?page={{ sectorlist.previous_page_number }}">Previous</a></li>
+      {% endif %}
+
+      <li class="page-item active"><a class="page-link" href="#">Page {{ sectorlist.number }} of {{ sectorlist.paginator.num_pages }}</a></li>
+
+      {% if sectorlist.has_next %}
+       <li class="page-item"><a class="page-link" href="?page={{ sectorlist.next_page_number }}">Next</a></li>
+       <li class="page-item"><a class="page-link" href="?page={{ sectorlist.paginator.num_pages }}">&raquo;</a></li>
+      {% endif %}
+    </ul>
 
   </diV>
 
