@@ -28,7 +28,7 @@
     <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-    <!-- Current Ratio Graph -->
+    <!-- Current Ratio Graph (Liquidity Ratio) -->
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
@@ -36,14 +36,14 @@
         var data = google.visualization.arrayToDataTable([
            ['Company Name', 'Current Ratio',{ role: 'style' }, 'Threshold',{ role: 'style' } ],
            {% for companyfilter in companyfilter %}
-           ['{{ companyfilter.company.company_name }}',{{ companyfilter.current_ratio }},{% if companyfilter.current_ratio < 90 %} 'red' {% else %} 'green' {% endif %}, 90,'#00DEFD'],
+           ['{{ companyfilter.company.company_name }}',{{ companyfilter.current_ratio }},{% if companyfilter.current_ratio > 100 %} 'green' {% else %} 'red' {% endif %}, 100,'#00DEFD'],
            {% endfor %}
         ])
         data.addRows(5);;
         var options = {'title':'CURRENT RATIO (%)',
-                       'height':300,
-                       'vAxis': {title: '(%)'},
-                       'hAxis': {title: 'Company Name'},
+                       'height':500,
+                       'vAxis': {title: '(%)', viewWindow: {min: -500,max: 500},},
+                       'hAxis': {title: 'Company Name', viewWindow: {min: 0,max: {{companyfilter.count }}, },},
                        'legend': {position:'none'},
                        'series': {1: {type: 'line'}}};
         var chart = new google.visualization.ColumnChart(document.getElementById('current_ratio_graph'));
@@ -51,7 +51,7 @@
       }
     </script>
 
-    <!-- Debt to Equity Ratio -->
+    <!-- Debt to Equity Ratio (Solvability Ratio) -->
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
@@ -59,14 +59,14 @@
         var data = google.visualization.arrayToDataTable([
            ['Company Name', 'Debt to Equity Ratio',{ role: 'style' }, 'Threshold',{ role: 'style' } ],
            {% for companyfilter in companyfilter %}
-           ['{{ companyfilter.company.company_name }}',{{ companyfilter.debt_to_equity }},{% if companyfilter.debt_to_equity < 90 %} 'red' {% else %} 'green' {% endif %}, 90,'#00DEFD'],
+           ['{{ companyfilter.company.company_name }}',{{ companyfilter.debt_to_equity }},{% if companyfilter.debt_to_equity < 100 %} 'green' {% else %} 'red' {% endif %}, 100,'#00DEFD'],
            {% endfor %}
         ])
         data.addRows(5);;
         var options = {'title':'DEBT TO EQUITY RATIO (%)',
-                       'height':300,
-                       'vAxis': {title: '(%)'},
-                       'hAxis': {title: 'Company Name'},
+                       'height':500,
+                       'vAxis': {title: '(%)',viewWindow: {min: -300,max: 300}},
+                       'hAxis': {title: 'Company Name',  viewWindow: {min: 0,max: {{companyfilter.count }}}},
                        'legend': {position:'none'},
                        'series': {1: {type: 'line'}}};
         var chart = new google.visualization.ColumnChart(document.getElementById('debt_to_equity_ratio_graph'));
@@ -74,7 +74,7 @@
       }
     </script>
 
-    <!-- Return on Equity -->
+    <!-- Return on Equity (Profitability Ratio ) -->
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
@@ -82,14 +82,14 @@
         var data = google.visualization.arrayToDataTable([
            ['Company Name', 'Return on Equity',{ role: 'style' }, 'Threshold',{ role: 'style' } ],
            {% for companyfilter in companyfilter %}
-           ['{{ companyfilter.company.company_name }}',{{ companyfilter.return_on_equity }},{% if companyfilter.return_on_equity < 90 %} 'red' {% else %} 'green' {% endif %}, 90,'#00DEFD'],
+           ['{{ companyfilter.company.company_name }}',{{ companyfilter.return_on_equity }},{% if companyfilter.return_on_equity > 13 %} 'green' {% else %} 'red' {% endif %}, 13,'#00DEFD'],
            {% endfor %}
         ])
         data.addRows(5);;
         var options = {'title':'RETURN ON EQUITY (%)',
-                       'height':300,
-                       'vAxis': {title: '(%)'},
-                       'hAxis': {title: 'Company Name'},
+                       'height':500,
+                       'vAxis': {title: '(%)', viewWindow: {min: -50,max: 50}},
+                       'hAxis': {title: 'Company Name', viewWindow: {min: 0,max: {{companyfilter.count }}}},
                        'legend': {position:'none'},
                        'series': {1: {type: 'line'}}};
         var chart = new google.visualization.ColumnChart(document.getElementById('return_on_equity_graph'));
@@ -97,7 +97,7 @@
       }
     </script>
 
-    <!-- Operating Profit Margin -->
+    <!-- Operating Profit Margin (Profitability Ratio ) -->
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
@@ -105,14 +105,14 @@
         var data = google.visualization.arrayToDataTable([
            ['Company Name', 'Operating Profit Margin',{ role: 'style' }, 'Threshold',{ role: 'style' } ],
            {% for companyfilter in companyfilter %}
-           ['{{ companyfilter.company.company_name }}',{{ companyfilter.operating_profit_margin }},{% if companyfilter.operating_profit_margin < 90 %} 'red' {% else %} 'green' {% endif %}, 90,'#00DEFD'],
+           ['{{ companyfilter.company.company_name }}',{{ companyfilter.operating_profit_margin }},{% if companyfilter.operating_profit_margin > 30 %} 'green' {% else %} 'red' {% endif %}, 30,'#00DEFD'],
            {% endfor %}
         ])
         data.addRows(5);;
         var options = {'title':'OPERATING PROFIT MARGIN (%)',
-                       'height':300,
-                       'vAxis': {title: '(%)'},
-                       'hAxis': {title: 'Company Name'},
+                       'height':500,
+                       'vAxis': {title: '(%)',viewWindow: {min: -100,max: 100}},
+                       'hAxis': {title: 'Company Name', viewWindow: {min: 0,max: {{companyfilter.count }}}},
                        'legend': {position:'none'},
                        'series': {1: {type: 'line'}}};
         var chart = new google.visualization.ColumnChart(document.getElementById('operating_profit_margin_graph'));
@@ -120,7 +120,7 @@
       }
     </script>
 
-    <!-- Net Profit Margin -->
+    <!-- Net Profit Margin (Profitability Ratio ) -->
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
@@ -128,14 +128,14 @@
         var data = google.visualization.arrayToDataTable([
            ['Company Name', 'Net Profit Margin',{ role: 'style' }, 'Threshold',{ role: 'style' } ],
            {% for companyfilter in companyfilter %}
-           ['{{ companyfilter.company.company_name }}',{{ companyfilter.net_profit_margin }},{% if companyfilter.net_profit_margin < 90 %} 'red' {% else %} 'green' {% endif %}, 90,'#00DEFD'],
+           ['{{ companyfilter.company.company_name }}',{{ companyfilter.net_profit_margin }},{% if companyfilter.net_profit_margin > 10 %} 'green' {% else %} 'red' {% endif %}, 10,'#00DEFD'],
            {% endfor %}
         ])
         data.addRows(5);;
         var options = {'title':'NET PROFIT MARGIN (%)',
-                       'height':300,
-                       'vAxis': {title: '(%)'},
-                       'hAxis': {title: 'Company Name'},
+                       'height':500,
+                       'vAxis': {title: '(%)', viewWindow: {min: -50,max: 50}},
+                       'hAxis': {title: 'Company Name', viewWindow: {min: 0,max: {{companyfilter.count }}}},
                        'legend': {position:'none'},
                        'series': {1: {type: 'line'}}};
         var chart = new google.visualization.ColumnChart(document.getElementById('net_profit_margin_graph'));
@@ -143,7 +143,7 @@
       }
     </script>
 
-    <!-- Price Earning Ratio -->
+    <!-- Price Earning Ratio (Market Ratio) -->
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
@@ -151,14 +151,14 @@
         var data = google.visualization.arrayToDataTable([
            ['Company Name', 'Price Earning Ratio',{ role: 'style' }, 'Threshold',{ role: 'style' } ],
            {% for companyfilter in companyfilter %}
-           ['{{ companyfilter.company.company_name }}',{{ companyfilter.price_earning_ratio }},{% if companyfilter.price_earning_ratio < 90 %} 'red' {% else %} 'green' {% endif %}, 90,'#00DEFD'],
+           ['{{ companyfilter.company.company_name }}',{{ companyfilter.price_earning_ratio }},{% if companyfilter.price_earning_ratio < 15 %} 'green' {% else %} 'red' {% endif %}, 15,'#00DEFD'],
            {% endfor %}
         ])
         data.addRows(5);;
         var options = {'title':'PRICE EARNING RATIO',
-                       'height':300,
-                       'vAxis': {title: 'Ratio'},
-                       'hAxis': {title: 'Company Name'},
+                       'height':500,
+                       'vAxis': {title: 'Ratio', viewWindow: {min: -200,max: 200}},
+                       'hAxis': {title: 'Company Name', viewWindow: {min: 0,max: {{companyfilter.count }}}},
                        'legend': {position:'none'},
                        'series': {1: {type: 'line'}}};
         var chart = new google.visualization.ColumnChart(document.getElementById('price_earning_ratio_graph'));
@@ -166,22 +166,22 @@
       }
     </script>
 
-    <!-- Price Earning Ratio -->
+    <!-- Dividend Yield (Market Ratio)-->
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-           ['Company Name', 'Dividend Yield',{ role: 'style' }, 'Threshold',{ role: 'style' } ],
+           ['Company Name', 'Dividend Yield',{ role: 'style' },'Threshold',{ role: 'style' }],
            {% for companyfilter in companyfilter %}
-           ['{{ companyfilter.company.company_name }}',{{ companyfilter.dividend_yield }},{% if companyfilter.dividend_yield < 90 %} 'red' {% else %} 'green' {% endif %}, 90,'#00DEFD'],
+           ['{{ companyfilter.company.company_name }}',{{ companyfilter.dividend_yield }}, {% if companyfilter.dividend_yield > 3 %} 'green' {% else %} 'red' {% endif %}, 3,'#00DEFD'],
            {% endfor %}
         ])
         data.addRows(5);;
         var options = {'title':'DIVIDEND YIELD (%)',
-                       'height':300,
-                       'vAxis': {title: '(%)'},
-                       'hAxis': {title: 'Company Name'},
+                       'height':500,
+                       'vAxis': {title: '(%)', viewWindow: {min: -5,max: 5}},
+                       'hAxis': {title: 'Company Name', viewWindow: {min: 0,max: {{companyfilter.count }}}},
                        'legend': {position:'none'},
                        'series': {1: {type: 'line'}}};
         var chart = new google.visualization.ColumnChart(document.getElementById('dividend_yield_graph'));
