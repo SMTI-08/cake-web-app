@@ -36,7 +36,7 @@
         var data = google.visualization.arrayToDataTable([
            ['Company Name', 'Current Ratio',{ role: 'style' }, 'Threshold',{ role: 'style' } ],
            {% for companyfilter in companyfilter %}
-           ['{{ companyfilter.company.company_name }}',{{ companyfilter.current_ratio }},{% if companyfilter.current_ratio > 100 %} 'green' {% else %} 'red' {% endif %}, 100,'#00DEFD'],
+           ['{{ companyfilter.company.company_name }}',{{ companyfilter.current_ratio }},{% if companyfilter.current_ratio > 100 %} '#4DCC00' {% else %} '#F40000' {% endif %}, 100,'#00DEFD'],
            {% endfor %}
         ])
         data.addRows(5);;
@@ -59,7 +59,7 @@
         var data = google.visualization.arrayToDataTable([
            ['Company Name', 'Debt to Equity Ratio',{ role: 'style' }, 'Threshold',{ role: 'style' } ],
            {% for companyfilter in companyfilter %}
-           ['{{ companyfilter.company.company_name }}',{{ companyfilter.debt_to_equity }},{% if companyfilter.debt_to_equity < 100 %} 'green' {% else %} 'red' {% endif %}, 100,'#00DEFD'],
+           ['{{ companyfilter.company.company_name }}',{{ companyfilter.debt_to_equity }},{% if companyfilter.debt_to_equity < 100 %} '#4DCC00' {% else %} '#F40000' {% endif %}, 100,'#00DEFD'],
            {% endfor %}
         ])
         data.addRows(5);;
@@ -82,7 +82,7 @@
         var data = google.visualization.arrayToDataTable([
            ['Company Name', 'Return on Equity',{ role: 'style' }, 'Threshold',{ role: 'style' } ],
            {% for companyfilter in companyfilter %}
-           ['{{ companyfilter.company.company_name }}',{{ companyfilter.return_on_equity }},{% if companyfilter.return_on_equity > 13 %} 'green' {% else %} 'red' {% endif %}, 13,'#00DEFD'],
+           ['{{ companyfilter.company.company_name }}',{{ companyfilter.return_on_equity }},{% if companyfilter.return_on_equity > 13 %} '#4DCC00' {% else %} '#F40000' {% endif %}, 13,'#00DEFD'],
            {% endfor %}
         ])
         data.addRows(5);;
@@ -105,7 +105,7 @@
         var data = google.visualization.arrayToDataTable([
            ['Company Name', 'Operating Profit Margin',{ role: 'style' }, 'Threshold',{ role: 'style' } ],
            {% for companyfilter in companyfilter %}
-           ['{{ companyfilter.company.company_name }}',{{ companyfilter.operating_profit_margin }},{% if companyfilter.operating_profit_margin > 30 %} 'green' {% else %} 'red' {% endif %}, 30,'#00DEFD'],
+           ['{{ companyfilter.company.company_name }}',{{ companyfilter.operating_profit_margin }},{% if companyfilter.operating_profit_margin > 30 %} '#4DCC00' {% else %} '#F40000' {% endif %}, 30,'#00DEFD'],
            {% endfor %}
         ])
         data.addRows(5);;
@@ -128,7 +128,7 @@
         var data = google.visualization.arrayToDataTable([
            ['Company Name', 'Net Profit Margin',{ role: 'style' }, 'Threshold',{ role: 'style' } ],
            {% for companyfilter in companyfilter %}
-           ['{{ companyfilter.company.company_name }}',{{ companyfilter.net_profit_margin }},{% if companyfilter.net_profit_margin > 10 %} 'green' {% else %} 'red' {% endif %}, 10,'#00DEFD'],
+           ['{{ companyfilter.company.company_name }}',{{ companyfilter.net_profit_margin }},{% if companyfilter.net_profit_margin > 10 %} '#4DCC00' {% else %} '#F40000' {% endif %}, 10,'#00DEFD'],
            {% endfor %}
         ])
         data.addRows(5);;
@@ -151,7 +151,7 @@
         var data = google.visualization.arrayToDataTable([
            ['Company Name', 'Price Earning Ratio',{ role: 'style' }, 'Threshold',{ role: 'style' } ],
            {% for companyfilter in companyfilter %}
-           ['{{ companyfilter.company.company_name }}',{{ companyfilter.price_earning_ratio }},{% if companyfilter.price_earning_ratio < 15 %} 'green' {% else %} 'red' {% endif %}, 15,'#00DEFD'],
+           ['{{ companyfilter.company.company_name }}',{{ companyfilter.price_earning_ratio }},{% if companyfilter.price_earning_ratio < 15 %} '#4DCC00' {% else %} '#F40000' {% endif %}, 15,'#00DEFD'],
            {% endfor %}
         ])
         data.addRows(5);;
@@ -174,7 +174,7 @@
         var data = google.visualization.arrayToDataTable([
            ['Company Name', 'Dividend Yield',{ role: 'style' },'Threshold',{ role: 'style' }],
            {% for companyfilter in companyfilter %}
-           ['{{ companyfilter.company.company_name }}',{{ companyfilter.dividend_yield }}, {% if companyfilter.dividend_yield > 3 %} 'green' {% else %} 'red' {% endif %}, 3,'#00DEFD'],
+           ['{{ companyfilter.company.company_name }}',{{ companyfilter.dividend_yield }}, {% if companyfilter.dividend_yield > 3 %} '#4DCC00' {% else %} '#F40000' {% endif %}, 3,'#00DEFD'],
            {% endfor %}
         ])
         data.addRows(5);;

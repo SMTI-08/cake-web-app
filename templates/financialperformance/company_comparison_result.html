@@ -4,9 +4,12 @@
 
 <div class="container-fluid" >
 
-  <div style="margin-top:50px; margin-left:10px; margin-right:10px;">
+  <div style="margin-top:20px; margin-left:20px; margin-right:20px;">
 
-    <div class="row text-center">
+    <h2 style="width:bold; color:black">Comparison Financial Performance</h2>
+    <h3 style="color:#535B68">The Following is a comparison of the financial performance</h3>
+
+    <div class="row text-center" style="margin-top:10px; padding:0.9%">
       <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
       <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
         <form method="GET" action="{% url 'company_comparison_url' %}">
@@ -108,63 +111,178 @@
       <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
     </div>
 
+    <!-- current_ratio_graph -->
     <div class="row text-center" style="margin-top:30px; margin-bottom:30px;">
       <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="margin-bottom:10px;">
         <div id="current_ratio_graph"></div>
       </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:left;">
+        <p style="font-size:18px; color:#000000; font-weight:bold;">LEGEND</p>
+        <div class="row inline-block" style="height:50px; margin-left:10px;">
+          <div style="width:50px; height:100%; background-color:#4DCC00; padding:1%"></div>
+          <p style="font-size:16px; color:#000000; font-weight:bold; margin:auto 20px;">GOOD</p>
+        </div>
+        <div class="row inline-block" style="height:50px; margin-top:25px; margin-left:10px;">
+          <div style="width:50px; height:100%; background-color:#F40000; padding:1%"></div>
+          <p style="font-size:16px; color:#000000; font-weight:bold; margin:auto 20px;">NOT GOOD</p>
+        </div>
+        <p style="margin-top:25px; text-align:justify;">In the calculation of Current Ratio, a number that is considered good is a number that is
+          more than 100% because a company is said to be good if there is a balance in paying off debt and
+          cash that is available. The meaning of 100% is that the company can pay its debt with existing assets.
+          If more than 100% means when paying a debt, the asset is still left over.</p>
+      </div>
       <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
     </div>
 
+    <!-- debt_to_equity_ratio_graph -->
     <div class="row text-center" style="margin-top:30px; margin-bottom:30px;">
       <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="margin-bottom:10px;">
         <div id="debt_to_equity_ratio_graph"></div>
       </div>
-      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-    </div>
-
-    <div class="row text-center" style="margin-top:30px; margin-bottom:30px;">
-      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-        <div id="return_on_equity_graph"></div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:left;">
+        <p style="font-size:18px; color:#000000; font-weight:bold;">LEGEND</p>
+        <div class="row inline-block" style="height:50px; margin-left:10px;">
+          <div style="width:50px; height:100%; background-color:#4DCC00; padding:1%"></div>
+          <p style="font-size:16px; color:#000000; font-weight:bold; margin:auto 20px;">GOOD</p>
+        </div>
+        <div class="row inline-block" style="height:50px; margin-top:25px; margin-left:10px;">
+          <div style="width:50px; height:100%; background-color:#F40000; padding:1%"></div>
+          <p style="font-size:16px; color:#000000; font-weight:bold; margin:auto 20px;">NOT GOOD</p>
+        </div>
+        <p style="margin-top:25px; text-align:justify;">Debt to Equity Ratio (DER) compares between total liabilities (liabilities) and equity (equity).
+          Debt may not be greater than capital so that the company's burden does not increase. Low ratio means that the condition of the company is
+          getting better because the portion of debt to capital is getting smaller. The limit for this ratio is 100%, if it is more than 100% it is
+          considered not good.</p>
       </div>
       <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
     </div>
-  </div>
 
-  <div class="row text-center" style="margin-top:30px; margin-bottom:30px;">
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-      <div id="operating_profit_margin_graph"></div>
+    <!-- return_on_equity_graph -->
+    <div class="row text-center" style="margin-top:30px; margin-bottom:30px;">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="margin-bottom:10px;">
+        <div id="return_on_equity_graph"></div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:left;">
+        <p style="font-size:18px; color:#000000; font-weight:bold;">LEGEND</p>
+        <div class="row inline-block" style="height:50px; margin-left:10px;">
+          <div style="width:50px; height:100%; background-color:#4DCC00; padding:1%"></div>
+          <p style="font-size:16px; color:#000000; font-weight:bold; margin:auto 20px;">GOOD</p>
+        </div>
+        <div class="row inline-block" style="height:50px; margin-top:25px; margin-left:10px;">
+          <div style="width:50px; height:100%; background-color:#F40000; padding:1%"></div>
+          <p style="font-size:16px; color:#000000; font-weight:bold; margin:auto 20px;">NOT GOOD</p>
+        </div>
+        <p style="margin-top:25px; text-align:justify;">This ratio is used to measure the level of profitability of a company. Historically,
+          profitable companies are companies that have high ROE. Suppose a company has a ROE of 20%, meaning that for a capital of 1 million,
+          the company generates profits of Rp. 200,000. Because Indonesia is a country that experiences high inflation and risk levels, it is
+          advisable to choose issuers with ROE > 13%. So, companies with a ratio of > 13% are considered good.</p>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
     </div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-  </div>
 
-  <div class="row text-center" style="margin-top:30px; margin-bottom:30px;">
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-      <div id="net_profit_margin_graph"></div>
+    <!-- operating_profit_margin_graph -->
+    <div class="row text-center" style="margin-top:30px; margin-bottom:30px;">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="margin-bottom:10px;">
+        <div id="operating_profit_margin_graph"></div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:left;">
+        <p style="font-size:18px; color:#000000; font-weight:bold;">LEGEND</p>
+        <div class="row inline-block" style="height:50px; margin-left:10px;">
+          <div style="width:50px; height:100%; background-color:#4DCC00; padding:1%"></div>
+          <p style="font-size:16px; color:#000000; font-weight:bold; margin:auto 20px;">GOOD</p>
+        </div>
+        <div class="row inline-block" style="height:50px; margin-top:25px; margin-left:10px;">
+          <div style="width:50px; height:100%; background-color:#F40000; padding:1%"></div>
+          <p style="font-size:16px; color:#000000; font-weight:bold; margin:auto 20px;">NOT GOOD</p>
+        </div>
+        <p style="margin-top:25px; text-align:justify;">This ratio is usually used by companies to measure how much money the company gets in each sale,
+          before paying interest on loans and taxes. The higher the Operating Profit Margin, the better the profit of a company. Therefore, it can be said
+          that the safe number is > 30%</p>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
     </div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-  </div>
 
-  <div class="row text-center" style="margin-top:30px; margin-bottom:30px;">
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-      <div id="price_earning_ratio_graph"></div>
+    <!-- net_profit_margin_graph -->
+    <div class="row text-center" style="margin-top:30px; margin-bottom:30px;">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="margin-bottom:10px;">
+        <div id="net_profit_margin_graph"></div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:left;">
+        <p style="font-size:18px; color:#000000; font-weight:bold;">LEGEND</p>
+        <div class="row inline-block" style="height:50px; margin-left:10px;">
+          <div style="width:50px; height:100%; background-color:#4DCC00; padding:1%"></div>
+          <p style="font-size:16px; color:#000000; font-weight:bold; margin:auto 20px;">GOOD</p>
+        </div>
+        <div class="row inline-block" style="height:50px; margin-top:25px; margin-left:10px;">
+          <div style="width:50px; height:100%; background-color:#F40000; padding:1%"></div>
+          <p style="font-size:16px; color:#000000; font-weight:bold; margin:auto 20px;">NOT GOOD</p>
+        </div>
+        <p style="margin-top:25px; text-align:justify;">The purpose of calculating Net Profit Margin is to measure the overall success of
+          a company's business. High Net Profit Margin shows that the company sets the price of its product correctly and successfully controls costs.
+          This Net Profit Margin ratio will be very useful when comparing the profitability of competitors in the same industry because it has the same
+          business environment and customer base and has a similar cost structure. Generally, although it depends on the type of industry
+          and its business structure, NPM with a percentage of more than 10% has been considered very good.</p>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
     </div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-  </div>
 
-  <div class="row text-center" style="margin-top:30px; margin-bottom:30px;">
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-      <div id="dividend_yield_graph"></div>
+    <!-- price_earning_ratio_graph -->
+    <div class="row text-center" style="margin-top:30px; margin-bottom:30px;">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="margin-bottom:10px;">
+        <div id="price_earning_ratio_graph"></div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:left;">
+        <p style="font-size:18px; color:#000000; font-weight:bold;">LEGEND</p>
+        <div class="row inline-block" style="height:50px; margin-left:10px;">
+          <div style="width:50px; height:100%; background-color:#4DCC00; padding:1%"></div>
+          <p style="font-size:16px; color:#000000; font-weight:bold; margin:auto 20px;">CHEAP</p>
+        </div>
+        <div class="row inline-block" style="height:50px; margin-top:25px; margin-left:10px;">
+          <div style="width:50px; height:100%; background-color:#F40000; padding:1%"></div>
+          <p style="font-size:16px; color:#000000; font-weight:bold; margin:auto 20px;">EXPENSIVE</p>
+        </div>
+        <p style="margin-top:25px; text-align:justify;">The purpose of calculating Net Profit Margin is to measure the overall success of a company's
+          business. High Net Profit Margin shows that the company sets the price of its product correctly and successfully controls costs.
+          This Net Profit Margin ratio will be very useful when comparing the profitability of competitors in the same industry because it
+          has the same business environment and customer base and has a similar cost structure. Generally, although it depends on the type
+          of industry and its business structure, NPM with a percentage of more than 15% has been considered very good.</p>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
     </div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+
+    <!-- dividend_yield_graph -->
+    <div class="row text-center" style="margin-top:30px; margin-bottom:30px;">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="margin-bottom:10px;">
+        <div id="dividend_yield_graph"></div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:left;">
+        <p style="font-size:18px; color:#000000; font-weight:bold;">LEGEND</p>
+        <div class="row inline-block" style="height:50px; margin-left:10px;">
+          <div style="width:50px; height:100%; background-color:#4DCC00; padding:1%"></div>
+          <p style="font-size:16px; color:#000000; font-weight:bold; margin:auto 20px;">GOOD</p>
+        </div>
+        <div class="row inline-block" style="height:50px; margin-top:25px; margin-left:10px;">
+          <div style="width:50px; height:100%; background-color:#F40000; padding:1%"></div>
+          <p style="font-size:16px; color:#000000; font-weight:bold; margin:auto 20px;">NOT GOOD</p>
+        </div>
+        <p style="margin-top:25px; text-align:justify;">Dividend yield is dividend per share divided by stock market prices. In simple terms
+          dividend yield is the level of profit provided by the company. For example, Indofood Sukses Makmur (INDF) provides dividends
+          per share of Rp 200 per share, where the current market price is Rp 5,000. So the INDF dividend yield is 4%.
+          Companies that provide high dividend yields, their share prices will increase especially before the announcement of dividends.
+          The greater the value of the Yield Dividend, the better. Then, if the value is growth from the previous year, it can be said to be good / good.
+          So, good or not depends on the growth</p>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    </div>
+
   </div>
-</div>
 
 </div>
 
