@@ -69,13 +69,13 @@
         <div style="width:50px; height:50px; border:2px solid white; {% if forloop.counter == 1 %} background-color:#FBC531 {% elif forloop.counter == 2 %} background-color:#487EB0 {% elif forloop.counter == 3 %} background-color:#E84118 {% elif forloop.counter == 4 %} background-color:#05c46b {% else %} background-color:#4bcffa {% endif %}; border-radius: 5px;">
           <h3 style="color:white; text-align:center"><strong>{{ forloop.counter }}</strong></h3>
         </div>
-        <div style="text-align:center">
+        <div style="text-align:center; margin-bottom:30px;">
           <h5><strong> {{ companylist.company_name|upper }} </strong></h5>
         </div>
         <div class="row" style="padding:10px; margin-bottom:20px;">
           <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align:center"><img src="{{ companylist.company_logo.url }}" style="width:200px; text-align:center"></img></div>
-          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"></div>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align:center; padding:30px;"><img src="{{ companylist.company_logo.url }}" style="width:200px; text-align:center"></img></div>
+          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7" style="text-align:justify; padding:30px;"><p>{{ companylist.company_desc }}</p></div>
           <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
         </div>
       </div>
