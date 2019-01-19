@@ -135,12 +135,12 @@ Berikut adalah batas angka pada setiap perhitungan rasio :
 
 - Dashboard Company
 <p align="center">
-  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Dashboard Company 2.png">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Dashboard Company 3.png">
 </p>
 
 - Dashboard Sector
 <p align="center">
-  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Dashboard Sector 2.png">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Dashboard Sector 3.png">
 </p>
 
 - Financial Performance
@@ -148,9 +148,14 @@ Berikut adalah batas angka pada setiap perhitungan rasio :
   <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Financial Performance (before selecting with footer).png">
 </p>
 
-- Comparison Financial Performance
+- Comparison Financial Performance (Before Click)
 <p align="center">
-  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Comparison Financial Performance (2).png">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Comparison Financial Performance 3 (Before Click).png">
+</p>
+
+- Comparison Financial Performance (After Click)
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Comparison Financial Performance 3 (After Click).png">
 </p>
 
 <h3 id="database_design">Desain Database</h3>
