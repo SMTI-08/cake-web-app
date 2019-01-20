@@ -276,6 +276,63 @@
         border-color: #46C9B6;
         color: white;
       }
+
+      /* Popup container - can be anything you want */
+      .popup {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* The actual popup */
+      .popup .popuptext {
+        visibility: hidden;
+        width: 160px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -80px;
+      }
+
+      /* Popup arrow */
+      .popup .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+      }
+
+      /* Toggle this class - hide and show the popup */
+      .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+      }
+
+      /* Add animation (fade in the popup) */
+      @-webkit-keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+      }
+
+      @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity:1 ;}
+      }
     </style>
   </head>
 
@@ -305,7 +362,7 @@
     <footer id="footer">
       <div class="container-fluid" style="margin:auto">
         <div class="row" style="margin-left:20px;">
-          <h4 style="color:#FFFFFF;"><strong>Suportted by :</strong></h4>
+          <h4 style="color:#FFFFFF;"><strong>Supported by :</strong></h4>
         </div>
         <div class="row inline-block" style="margin:auto; padding-left:50px; padding-right:50px;">
           <div style="padding:30px; margin:auto"><img src="{% static 'image/idx.png' %}" width="100"></div>
@@ -351,6 +408,398 @@
       $(document).ready(function() {
         $('.js-example-basic-single').select2({placeholder: "Search company by name or code or sector",});
       });
+    </script>
+
+    <script>
+      function cash_popup() {
+        var popup = document.getElementById("cash_info");
+        popup.classList.toggle("show");
+      }
+
+      function inventory_popup() {
+        var popup = document.getElementById("inventory_info");
+        popup.classList.toggle("show");
+      }
+
+      function current_asset_popup() {
+        var popup = document.getElementById("current_asset_info");
+        popup.classList.toggle("show");
+      }
+
+      function fixed_asset_popup() {
+        var popup = document.getElementById("fixed_asset_info");
+        popup.classList.toggle("show");
+      }
+
+      function total_asset_popup() {
+        var popup = document.getElementById("total_asset_info");
+        popup.classList.toggle("show");
+      }
+
+      function current_liabilities_popup() {
+        var popup = document.getElementById("current_liabilities_info");
+        popup.classList.toggle("show");
+      }
+
+      function long_term_liabilities_popup() {
+        var popup = document.getElementById("long_term_liabilities_info");
+        popup.classList.toggle("show");
+      }
+
+      function total_liabilities_popup() {
+        var popup = document.getElementById("total_liabilities_info");
+        popup.classList.toggle("show");
+      }
+
+      function outstanding_share_popup() {
+        var popup = document.getElementById("outstanding_share_info");
+        popup.classList.toggle("show");
+      }
+
+      function total_equity_popup() {
+        var popup = document.getElementById("total_equity_info");
+        popup.classList.toggle("show");
+      }
+
+      function total_revenue_popup() {
+        var popup = document.getElementById("total_revenue_info");
+        popup.classList.toggle("show");
+      }
+
+      function gross_profit_popup() {
+        var popup = document.getElementById("gross_profit_info");
+        popup.classList.toggle("show");
+      }
+
+      function operating_profit_popup() {
+        var popup = document.getElementById("operating_profit_info");
+        popup.classList.toggle("show");
+      }
+
+      function interest_expense_popup() {
+        var popup = document.getElementById("interest_expense_info");
+        popup.classList.toggle("show");
+      }
+
+      function net_profit_popup() {
+        var popup = document.getElementById("net_profit_info");
+        popup.classList.toggle("show");
+      }
+
+      function earnings_per_share_popup() {
+        var popup = document.getElementById("earnings_per_share_info");
+        popup.classList.toggle("show");
+      }
+
+      function dividend_payment_popup() {
+        var popup = document.getElementById("dividend_payment_info");
+        popup.classList.toggle("show");
+      }
+
+      function stock_price_popup() {
+        var popup = document.getElementById("stock_price_info");
+        popup.classList.toggle("show");
+      }
+
+      // Liquidity Ratio
+      function liquidity_ratio_popup() {
+        var popup = document.getElementById("liquidity_ratio_info");
+        popup.classList.toggle("show");
+      }
+
+      function cash_ratio_popup() {
+        var popup = document.getElementById("cash_ratio_info");
+        popup.classList.toggle("show");
+      }
+
+      function quick_acid_ratio_popup() {
+        var popup = document.getElementById("quick_acid_ratio_info");
+        popup.classList.toggle("show");
+      }
+
+      function current_ratio_popup() {
+        var popup = document.getElementById("current_ratio_info");
+        popup.classList.toggle("show");
+      }
+
+      // Solvability Ratio
+      function solvability_ratio_popup() {
+        var popup = document.getElementById("solvability_ratio_info");
+        popup.classList.toggle("show");
+      }
+
+      function debt_to_asset_popup() {
+        var popup = document.getElementById("debt_to_asset_info");
+        popup.classList.toggle("show");
+      }
+
+      function debt_to_equity_popup() {
+        var popup = document.getElementById("debt_to_equity_info");
+        popup.classList.toggle("show");
+      }
+
+      function long_term_debt_to_equity_popup() {
+        var popup = document.getElementById("long_term_debt_to_equity_info");
+        popup.classList.toggle("show");
+      }
+
+      function coverage_ratio_popup() {
+        var popup = document.getElementById("coverage_ratio_info");
+        popup.classList.toggle("show");
+      }
+
+      // Profitability Ratio
+      function profitability_ratio_popup() {
+        var popup = document.getElementById("profitability_ratio_info");
+        popup.classList.toggle("show");
+      }
+
+      function return_on_equity_popup() {
+        var popup = document.getElementById("return_on_equity_info");
+        popup.classList.toggle("show");
+      }
+
+      function return_on_asset_popup() {
+        var popup = document.getElementById("return_on_asset_info");
+        popup.classList.toggle("show");
+      }
+
+      function gross_profit_margin_popup() {
+        var popup = document.getElementById("gross_profit_margin_info");
+        popup.classList.toggle("show");
+      }
+
+      function operating_profit_margin_popup() {
+        var popup = document.getElementById("operating_profit_margin_info");
+        popup.classList.toggle("show");
+      }
+
+      function net_profit_margin_popup() {
+        var popup = document.getElementById("net_profit_margin_info");
+        popup.classList.toggle("show");
+      }
+
+      // Market Ratio
+      function market_ratio_popup() {
+        var popup = document.getElementById("market_ratio_info");
+        popup.classList.toggle("show");
+      }
+
+      function price_earning_ratio_popup() {
+        var popup = document.getElementById("price_earning_ratio_info");
+        popup.classList.toggle("show");
+      }
+
+      function price_to_book_value_popup() {
+        var popup = document.getElementById("price_to_book_value_info");
+        popup.classList.toggle("show");
+      }
+
+      function dividend_per_share_popup() {
+        var popup = document.getElementById("dividend_per_share_info");
+        popup.classList.toggle("show");
+      }
+
+      function dividend_yield_popup() {
+        var popup = document.getElementById("dividend_yield_info");
+        popup.classList.toggle("show");
+      }
+
+      function dividend_payout_ratio_popup() {
+        var popup = document.getElementById("dividend_payout_ratio_info");
+        popup.classList.toggle("show");
+      }
+
+      // Turnover Ratio
+      function turnover_ratio_popup() {
+        var popup = document.getElementById("turnover_ratio_info");
+        popup.classList.toggle("show");
+      }
+
+      function total_asset_turnover_popup() {
+        var popup = document.getElementById("total_asset_turnover_info");
+        popup.classList.toggle("show");
+      }
+
+      function working_capital_turnover_popup() {
+        var popup = document.getElementById("working_capital_turnover_info");
+        popup.classList.toggle("show");
+      }
+
+      function fixed_asset_turnover_popup() {
+        var popup = document.getElementById("fixed_asset_turnover_info");
+        popup.classList.toggle("show");
+      }
+
+      function inventory_turnover_popup() {
+        var popup = document.getElementById("inventory_turnover_info");
+        popup.classList.toggle("show");
+      }
+
+
+      // Information Good or Not Good
+      function cash_ratio_good_popup() {
+        var popup = document.getElementById("cash_ratio_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function cash_ratio_not_good_popup() {
+        var popup = document.getElementById("cash_ratio_not_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function quick_acid_ratio_good_popup() {
+        var popup = document.getElementById("quick_acid_ratio_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function quick_acid_ratio_not_good_popup() {
+        var popup = document.getElementById("quick_acid_ratio_not_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function current_ratio_good_popup() {
+        var popup = document.getElementById("current_ratio_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function current_ratio_not_good_popup() {
+        var popup = document.getElementById("current_ratio_not_good_info");
+        popup.classList.toggle("show");
+      }
+
+      // Solvability Ratio
+      function debt_to_asset_good_popup() {
+        var popup = document.getElementById("debt_to_asset_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function debt_to_asset_not_good_popup() {
+        var popup = document.getElementById("debt_to_asset_not_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function debt_to_equity_good_popup() {
+        var popup = document.getElementById("debt_to_equity_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function debt_to_equity_not_good_popup() {
+        var popup = document.getElementById("debt_to_equity_not_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function long_term_debt_to_equity_good_popup() {
+        var popup = document.getElementById("long_term_debt_to_equity_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function long_term_debt_to_equity_not_good_popup() {
+        var popup = document.getElementById("long_term_debt_to_equity_not_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function coverage_ratio_good_popup() {
+        var popup = document.getElementById("coverage_ratio_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function coverage_ratio_not_good_popup() {
+        var popup = document.getElementById("coverage_ratio_not_good_info");
+        popup.classList.toggle("show");
+      }
+
+      // Profitability Ratio
+      function return_on_equity_good_popup() {
+        var popup = document.getElementById("return_on_equity_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function return_on_equity_not_good_popup() {
+        var popup = document.getElementById("return_on_equity_not_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function return_on_asset_good_popup() {
+        var popup = document.getElementById("return_on_asset_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function return_on_asset_not_good_popup() {
+        var popup = document.getElementById("return_on_asset_not_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function gross_profit_margin_good_popup() {
+        var popup = document.getElementById("gross_profit_margin_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function gross_profit_margin_not_good_popup() {
+        var popup = document.getElementById("gross_profit_margin_not_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function operating_profit_margin_good_popup() {
+        var popup = document.getElementById("operating_profit_margin_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function operating_profit_margin_not_good_popup() {
+        var popup = document.getElementById("operating_profit_margin_not_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function net_profit_margin_good_popup() {
+        var popup = document.getElementById("net_profit_margin_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function net_profit_margin_not_good_popup() {
+        var popup = document.getElementById("net_profit_margin_not_good_info");
+        popup.classList.toggle("show");
+      }
+
+      // Market Ratio
+      function price_earning_ratio_good_popup() {
+        var popup = document.getElementById("price_earning_ratio_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function price_earning_ratio_not_good_popup() {
+        var popup = document.getElementById("price_earning_ratio_not_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function price_to_book_value_good_popup() {
+        var popup = document.getElementById("price_to_book_value_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function price_to_book_value_not_good_popup() {
+        var popup = document.getElementById("price_to_book_value_not_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function dividend_yield_good_popup() {
+        var popup = document.getElementById("dividend_yield_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function dividend_yield_not_good_popup() {
+        var popup = document.getElementById("dividend_yield_not_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function dividend_payout_ratio_good_popup() {
+        var popup = document.getElementById("dividend_payout_ratio_good_info");
+        popup.classList.toggle("show");
+      }
+
+      function dividend_payout_ratio_not_good_popup() {
+        var popup = document.getElementById("dividend_payout_ratio_not_good_info");
+        popup.classList.toggle("show");
+      }
     </script>
 
   </body>
