@@ -112,15 +112,15 @@ Berikut adalah batas angka pada setiap perhitungan rasio :
    - **Long Term Debt to Equity**. Angka yang dianggap baik adalah angka yang kurang dari 100%.
    - **Coverage Ratio**. Angka yang dianggap baik adalah angka yang kurang dari 150%.
 3. **Profitability Ratio**
-   - **Return On Equity**. Angka yang dianggap baik adalah angka yang lebih dari 25%.
+   - **Return On Equity**. Angka yang dianggap baik adalah angka yang lebih dari 13%.
    - **Return On Asset**. Angka yang dianggap baik adalah angka yang lebih dari 5%.
    - **Gross Profit Margin**. Angka yang dianggap baik adalah angka yang lebih dari 50%.
    - **Operating Profit Margin**. Angka yang dianggap baik adalah angka yang lebih dari 30%.
    - **Net Profit Margin**. Angka yang dianggap baik adalah angka yang lebih dari 10%.
 4. **Market Ratio**
-   - **Price Earning Ratio**. Jika kurang dari 10 dikatakan “Cheap” dan lebih dari 10 dikatakan “Expensive”.
+   - **Price Earning Ratio**. Jika kurang dari 15 dikatakan “Cheap” dan lebih dari 15 dikatakan “Expensive”.
    - **Price to Book Value**. Nilai 1.0 adalah ambang batasnya, yang berarti jika kurang dari 1.0 maka disebut “Undervalued” sedangkan  lebih dari 1.0 disebut “Overvalued”.
-   - **Dividend Yield**. Semakin besar nilai Dividend Yield maka semakin baik. Kemudian, apabila nilai tersebut ada pertumbuhan dari nilai pada tahun sebelumnya maka dapat dikatakan baik/bagus. Jadi, bagus atau tidaknya tergantung pada pertumbuhannya.
+   - **Dividend Yield**. Semakin besar nilai Dividend Yield maka semakin baik. Kemudian, apabila nilai tersebut ada pertumbuhan dari nilai pada tahun sebelumnya maka dapat dikatakan baik/bagus. Jadi, bagus atau tidaknya tergantung pada pertumbuhannya.Tapi pada web ini bisa disimpulkan bahwa apabila < 3% dikatakan tidak bagus dan > 3% dikatakan bagus.
    - **Dividend Payout Ratio**. Angka yang dianggap baik adalah angka yang lebih dari 50%.
 
 <p align="justify">Selain fitur kinerja perusahaan, pada web ini juga terdapat fitur perbandingan. Perbandingan di sini adalah perbandingan kinerja antar perusahaan, mana yang memiliki kinerja yang baik dan mana yang memiliki kinerja yang buruk. Pada fitur ini terdapat kolom perusahaan yang akan dibandingkan. Berbeda dengan fitur sebelumnya, pada fitur ini hanya terdapat 11 variabel. Kemudian, variabel tersebut akan menghasilkan beberapa rasio, seperti Current Ratio, Debt to Equity Ratio, Return on Equity, Operating Profit Margin, Net Profit Margin, Price Earning Ratio, dan Dividend Yield. Rasio-rasio tersebut akan berupa grafik batang dengan ambang batas dan warna indikator sama seperti pada fitur sebelumnya. Arti dari warna indikator juga sama seperti pada fitur sebelumnya yaitu, warna merah untuk hasil yang kurang dari ambang batas berarti tidak bagus dan warna hijau untuk hasil lebih dari ambang batas berarti bagus. Kemudian, untuk menentukan bagus tidaknya digunakan perhitungan seperti yang sudah dijelaskan di atas. Setiap perusahaan yang dibandingkan memiliki hasil rasio dan warna indikatornya masing-masing dan dari grafik dan warna indikator pengguna bisa menyimpulkan bahwa perusahaan mana yang lebih baik kinerjanya. </p>
