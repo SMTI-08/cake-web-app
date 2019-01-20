@@ -7,7 +7,9 @@
   <div style="margin-top:20px; margin-left:20px; margin-right:20px;">
 
     <h2 style="width:bold; color:black">Comparison Financial Performance</h2>
-    <h3 style="color:#535B68">The Following is a comparison of the financial performance</h3>
+    <h3 style="color:#535B68; font-size:24px;" >On this page you can do comparisons between companies.
+      Please search and then choose several companies that will be compared in the search
+      column below.</h3>
 
     <div class="row text-center" style="margin-top:10px; padding:0.9%">
       <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
@@ -41,67 +43,67 @@
               <tr>
                 <th scope="row">Current Asset</th>
                 {% for companyfilter in companyfilter %}
-                  <td style="text-align:center;">{{ companyfilter.current_asset }}</td>
+                  <td style="text-align:center;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.current_asset }}</td>
                 {% endfor %}
               </tr>
               <tr>
                 <th scope="row">Current Liabilities</th>
                 {% for companyfilter in companyfilter %}
-                  <td style="text-align:center;">{{ companyfilter.current_liabilities }}</td>
+                  <td style="text-align:center;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.current_liabilities }}</td>
                 {% endfor %}
               </tr>
               <tr>
                 <th scope="row">Total Liabilities</th>
                 {% for companyfilter in companyfilter %}
-                  <td style="text-align:center;">{{ companyfilter.total_liabilities }}</td>
+                  <td style="text-align:center;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.total_liabilities }}</td>
                 {% endfor %}
               </tr>
               <tr>
                 <th scope="row">Outstanding Share</th>
                 {% for companyfilter in companyfilter %}
-                  <td style="text-align:center;">{{ companyfilter.outstanding_share }}</td>
+                  <td style="text-align:center;">Rp {{ companyfilter.outstanding_share }}</td>
                 {% endfor %}
               </tr>
               <tr>
                 <th scope="row">Total Equity</th>
                 {% for companyfilter in companyfilter %}
-                  <td style="text-align:center;">{{ companyfilter.total_equity }}</td>
+                  <td style="text-align:center;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.total_equity }}</td>
                 {% endfor %}
               </tr>
               <tr>
                 <th scope="row">Total Revenue</th>
                 {% for companyfilter in companyfilter %}
-                  <td style="text-align:center;">{{ companyfilter.total_revenue }}</td>
+                  <td style="text-align:center;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.total_revenue }}</td>
                 {% endfor %}
               </tr>
               <tr>
                 <th scope="row">Operating Profit</th>
                 {% for companyfilter in companyfilter %}
-                  <td style="text-align:center;">{{ companyfilter.operating_profit }}</td>
+                  <td style="text-align:center;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.operating_profit }}</td>
                 {% endfor %}
               </tr>
               <tr>
                 <th scope="row">Net Profit</th>
                 {% for companyfilter in companyfilter %}
-                  <td style="text-align:center;">{{ companyfilter.net_profit }}</td>
+                  <td style="text-align:center;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.net_profit }}</td>
                 {% endfor %}
               </tr>
               <tr>
                 <th scope="row">Earning per Share</th>
                 {% for companyfilter in companyfilter %}
-                  <td style="text-align:center;">{{ companyfilter.earnings_per_share }}</td>
+                  <td style="text-align:center;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.earnings_per_share }}</td>
                 {% endfor %}
               </tr>
               <tr>
                 <th scope="row">Dividend Payment</th>
                 {% for companyfilter in companyfilter %}
-                  <td style="text-align:center;">{{ companyfilter.dividend_payment }}</td>
+                  <td style="text-align:center;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.dividend_payment }}</td>
                 {% endfor %}
               </tr>
               <tr>
                 <th scope="row">Stock Price</th>
                 {% for companyfilter in companyfilter %}
-                  <td style="text-align:center;">{{ companyfilter.stock_price }}</td>
+                  <td style="text-align:center;">Rp {{ companyfilter.stock_price }}</td>
                 {% endfor %}
               </tr>
             </tbody>

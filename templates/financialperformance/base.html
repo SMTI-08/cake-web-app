@@ -333,6 +333,10 @@
         from {opacity: 0;}
         to {opacity:1 ;}
       }
+
+      .select2-selection{
+        text-align: left;
+      }
     </style>
   </head>
 
@@ -403,10 +407,10 @@
     <!-- Select2 -->
     <script>
       $(document).ready(function() {
-        $('.js-example-basic-multiple').select2({placeholder: "Search company by name or code or sector"});
+        $('.js-example-basic-multiple').select2({placeholder: "Search and choose company by name or code or sector", maximumSelectionLength: 4});
       });
       $(document).ready(function() {
-        $('.js-example-basic-single').select2({placeholder: "Search company by name or code or sector",});
+        $('.js-example-basic-single').select2({placeholder: "Search and select company by name or code or sector",});
       });
     </script>
 
