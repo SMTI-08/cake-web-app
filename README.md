@@ -163,6 +163,11 @@ Berikut adalah batas angka pada setiap perhitungan rasio :
   <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Comparison Financial Performance 3 (2) (After Click).png">
 </p>
 
+- Help
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Help.png">
+</p>
+
 <h3 id="database_design">Desain Database</h3>
 <p align="center">
   <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/db cake new.JPG">
