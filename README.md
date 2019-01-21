@@ -143,9 +143,14 @@ Berikut adalah batas angka pada setiap perhitungan rasio :
   <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Dashboard Sector 4.png">
 </p>
 
-- Financial Performance
+- Financial Performance (Before Click)
 <p align="center">
-  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Financial Performance (before selecting with footer).png">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Financial Performance (before click).png">
+</p>
+
+- Financial Performance  (After Click)
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Financial Performance (after click).png">
 </p>
 
 - Comparison Financial Performance (Before Click)
