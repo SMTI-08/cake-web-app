@@ -38,77 +38,77 @@
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
               <div class="row" style="padding:1%">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"><div class="popup" onclick="cash_popup()">Cash<span class="popuptext" id="cash_info" style="padding:20%">Cash is</span></div></div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.cash }}</div></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;"><div style="margin-right:60px; text-align:right;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.cash }}</div></div></div>
               </div>
               <div class="row" style="padding:1%">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"><div class="popup" onclick="inventory_popup()">Inventory<span class="popuptext" id="inventory_info" style="padding:20%">Inventory is</span></div></div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.inventory}}</div></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;"><div style="margin-right:60px; text-align:right;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.inventory}}</div></div></div>
               </div>
               <div class="row" style="padding:1%">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"><div class="popup" onclick="current_asset_popup()">Current Asset<span class="popuptext" id="current_asset_info" style="padding:20%">Current Asset is</span></div></div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.current_asset}}</div></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;"><div style="margin-right:60px; text-align:right;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.current_asset}}</div></div></div>
               </div>
               <div class="row" style="padding:1%">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"><div class="popup" onclick="fixed_asset_popup()">Fixed Asset<span class="popuptext" id="fixed_asset_info" style="padding:20%">Fixed Asset is</span></div></div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.fixed_asset}}</div></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;"><div style="margin-right:60px; text-align:right;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.fixed_asset}}</div></div></div>
               </div>
               <div class="row" style="padding:1%">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"><div class="popup" onclick="total_asset_popup()">Total Asset<span class="popuptext" id="total_asset_info" style="padding:20%">Total asset is</span></div></div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.total_asset }}</div></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;"><div style="margin-right:60px; text-align:right;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.total_asset }}</div></div></div>
               </div>
               <div class="row" style="padding:1%">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"><div class="popup" onclick="current_liabilities_popup()">Current Liabilities<span class="popuptext" id="current_liabilities_info" style="padding:20%">Current Liabilities is</span></div></div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.current_liabilities }}</div></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;"><div style="margin-right:60px; text-align:right;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.current_liabilities }}</div></div></div>
               </div>
               <div class="row" style="padding:1%">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"><div class="popup" onclick="long_term_liabilities_popup()">Long Term Liabilities<span class="popuptext" id="long_term_liabilities_info" style="padding:20%">Long Term Liabilities is</span></div></div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.long_term_liabilities }}</div></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;"><div style="margin-right:60px; text-align:right;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.long_term_liabilities }}</div></div></div>
               </div>
               <div class="row" style="padding:1%">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"><div class="popup" onclick="total_liabilities_popup()">Total Liabilities<span class="popuptext" id="total_liabilities_info" style="padding:20%">Total Liabilities is</span></div></div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.total_liabilities }}</div></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;"><div style="margin-right:60px; text-align:right;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.total_liabilities }}</div></div></div>
               </div>
               <div class="row" style="padding:1%">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"><div class="popup" onclick="outstanding_share_popup()">Outstanding Share<span class="popuptext" id="outstanding_share_info" style="padding:20%">Outstanding Share is</span></div></div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">Rp {{ companyfilter.outstanding_share }}</div></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;"><div style="margin-right:60px; text-align:right;">Rp {{ companyfilter.outstanding_share }}</div></div></div>
               </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
               <div class="row" style="padding:1%">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"><div class="popup" onclick="total_equity_popup()">Total Equity<span class="popuptext" id="total_equity_info" style="padding:20%">Total Equity is</span></div></div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.total_equity }}</div></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;"><div style="margin-right:60px; text-align:right;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.total_equity }}</div></div></div>
               </div>
               <div class="row" style="padding:1%">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"><div class="popup" onclick="total_revenue_popup()">Total Revenue<span class="popuptext" id="total_revenue_info" style="padding:20%">Total Revenue is</span></div></div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.total_revenue }}</div></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;"><div style="margin-right:60px; text-align:right;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.total_revenue }}</div></div></div>
               </div>
               <div class="row" style="padding:1%">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"><div class="popup" onclick="gross_profit_popup()">Gross Profit<span class="popuptext" id="gross_profit_info" style="padding:20%">Gross Profit is</span></div></div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.gross_profit }}</div></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;"><div style="margin-right:60px; text-align:right;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.gross_profit }}</div></div></div>
               </div>
               <div class="row" style="padding:1%">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"><div class="popup" onclick="operating_profit_popup()">Operating Profit<span class="popuptext" id="operating_profit_info" style="padding:20%">Operating Profit is</span></div></div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.operating_profit }}</div></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;"><div style="margin-right:60px; text-align:right;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.operating_profit }}</div></div></div>
               </div>
               <div class="row" style="padding:1%">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"><div class="popup" onclick="interest_expense_popup()">Interest Expense<span class="popuptext" id="interest_expense_info" style="padding:20%">Interest Expense is</span></div></div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.interest_expense }}</div></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;"><div style="margin-right:60px; text-align:right;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.interest_expense }}</div></div></div>
               </div>
               <div class="row" style="padding:1%">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"><div class="popup" onclick="net_profit_popup()">Net Profit<span class="popuptext" id="net_profit_info" style="padding:20%">Net Profit is</span></div></div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.net_profit }}</div></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;"><div style="margin-right:60px; text-align:right;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.net_profit }}</div></div></div>
               </div>
               <div class="row" style="padding:1%">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"><div class="popup" onclick="earnings_per_share_popup()">Earning per Share<span class="popuptext" id="earnings_per_share_info" style="padding:20%">Earning per Share is</span></div></div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.earnings_per_share }}</div></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;"><div style="margin-right:60px; text-align:right;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.earnings_per_share }}</div></div></div>
               </div>
               <div class="row" style="padding:1%">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"><div class="popup" onclick="dividend_payment_popup()">Dividend Payment<span class="popuptext" id="dividend_payment_info" style="padding:20%">Dividend Payment is</span></div></div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.dividend_payment }}</div></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;"><div style="margin-right:60px; text-align:right;">{% if companyfilter.exchange_rate_rupiah_dollar == 'rupiah' %} Rp {% else %} $ {% endif %} {{ companyfilter.dividend_payment }}</div></div></div>
               </div>
               <div class="row" style="padding:1%">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="text-align:left"><div class="popup" onclick="stock_price_popup()">Stock Price<span class="popuptext" id="stock_price_info" style="padding:20%">Stock Price is</span></div></div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;">Rp {{ companyfilter.stock_price }}</div></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"><div style="background-color:#7ed6df;"><div style="margin-right:60px; text-align:right;">Rp {{ companyfilter.stock_price }}</div></div></div>
               </div>
             </div>
           </div>
