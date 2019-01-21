@@ -337,6 +337,12 @@
       .select2-selection{
         text-align: left;
       }
+
+      .sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+      }
     </style>
   </head>
 
@@ -351,6 +357,7 @@
         <a href="{% url 'main_dashboard_url' %}"><span class="glyphicon glyphicon-home"></span> Dashboard</a>
         <a href="{% url 'company_analysis_url' %}"><span class="glyphicon glyphicon-stats"></span> Analysis Financial Performance</a>
         <a href="{% url 'company_comparison_url' %}"><span class="glyphicon glyphicon-transfer"></span> Comparison Financial Performance</a>
+        <a href="{% url 'help_url' %}"><span class="glyphicon glyphicon-question-sign"></span> Help</a>
       </div>
 
       <div id="main" style="margin: 0; padding: 0;" >

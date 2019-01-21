@@ -50,6 +50,12 @@ def sector_dashboard_view(request):
     template = 'financialperformance/sector_dashboard.html'
     return render(request, template, context)
 
+def help_view(request):
+    context = {
+    }
+    template = 'financialperformance/help.html'
+    return render(request, template, context)
+
 
 def company_analysis_view(request):
     financialdata = FinancialStatement.objects.all()
