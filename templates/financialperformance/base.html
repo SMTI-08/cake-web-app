@@ -207,11 +207,11 @@
       #footer {
         position: relative;
         clear:both;
-        margin-top: 50px;
         background-color:#22a6b3;
         min-height: 150px;
       }
 
+      /* SideNav */
       .sidenav {
         height: 100%;
         width: 0;
@@ -277,7 +277,7 @@
         color: white;
       }
 
-      /* Popup container - can be anything you want */
+      /* Popup */
       .popup {
         position: relative;
         display: inline-block;
@@ -288,7 +288,6 @@
         user-select: none;
       }
 
-      /* The actual popup */
       .popup .popuptext {
         visibility: hidden;
         width: 160px;
@@ -304,7 +303,6 @@
         margin-left: -80px;
       }
 
-      /* Popup arrow */
       .popup .popuptext::after {
         content: "";
         position: absolute;
@@ -316,14 +314,12 @@
         border-color: #555 transparent transparent transparent;
       }
 
-      /* Toggle this class - hide and show the popup */
       .popup .show {
         visibility: visible;
         -webkit-animation: fadeIn 1s;
         animation: fadeIn 1s;
       }
 
-      /* Add animation (fade in the popup) */
       @-webkit-keyframes fadeIn {
         from {opacity: 0;}
         to {opacity: 1;}
@@ -334,11 +330,34 @@
         to {opacity:1 ;}
       }
 
+      /* Selct2 */
       .select2-selection{
         text-align: left;
       }
 
-      .sticky {
+      /* Sticky sidebar */
+      .wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .main,
+      .sidebar {
+        border-left: 3px solid #f1c40f;
+        padding: 15px;
+        background-color: white;
+      }
+
+      .mainsidebar {
+        width: 70%;
+        height: 100%;
+        background: white;
+        border-left: 3px solid #f1c40f;
+      }
+
+      .sidebar {
+        width: 30%;
+        height: 100%;
         position: -webkit-sticky;
         position: sticky;
         top: 0;
