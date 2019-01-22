@@ -16,7 +16,7 @@ admin.site.register(CompanySector, CompanySectorAdmin)
 
 
 class CompanyAdmin(admin.ModelAdmin):
-    list_display = ['company_name','company_code','company_sector','company_url','company_logo']
+    list_display = ['company_name','company_code','company_desc','company_sector','company_url','company_logo']
     list_filter = ['company_sector',]
     list_per_page = 25
 
