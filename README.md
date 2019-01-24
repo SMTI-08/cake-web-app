@@ -58,10 +58,10 @@ Berikut adalah daftar rincian dokumentasi singkat dari proyek CAKe berbasis Web 
     - [x] Membuat multiselect form untuk memilih 2 perusahaan atau lebih untuk dibandingkan
     - [x] Menampilkan data rasio hasil perbandingan dalam bentuk diagram batang
     - [x] Memberikan ambang batasan (*threshold*) ratio untuk setiap diagram
-  - [ ] Implementasi Real Data *()*
-    - [ ] Menambahkan data sektor, perusahaan dan laporan keuangan
-    - [ ] Menambahkan data nilai batasan pada analisis dan perbandingan
-    - [ ] Menambahkan konten informasi pada tampilan Dashboard
+  - [x] Implementasi Real Data *(16 - 22 Januari 2019)*
+    - [x] Menambahkan data sektor, perusahaan dan laporan keuangan
+    - [x] Menambahkan data nilai batasan pada analisis dan perbandingan
+    - [x] Menambahkan konten informasi pada tampilan Dashboard
 
 <h3 id="project_timeline">Timeline Pengerjaan Proyek</h3>
 <p align="center">
@@ -174,5 +174,58 @@ Berikut adalah batas angka pada setiap perhitungan rasio :
 </p>
 
 <h3 id="implementation">Implementsi</h3>
+
+- Dashboard Awal
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - Dashboard.JPG">
+</p>
+
+- Dashboard Company
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - Company1.JPG">
+</p>
+
+- Dashboard Sector
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - Sector1.JPG">
+</p>
+
+- Financial Performance (Before Click)
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - AFP1.JPG">
+</p>
+
+- Financial Performance  (After Click)
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - AFP Result1.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - AFP Result2.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - AFP Result3.JPG">
+</p>
+
+- Comparison Financial Performance (Before Click)
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP.JPG">
+</p>
+
+- Comparison Financial Performance (After Click)
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP1.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP Result1.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP Result2.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP Result3.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP Result4.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP Result5.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP Result6.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP Result7.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP Result8.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP Result9.JPG">
+  
+</p>
+
+- Help
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/help page 1.png">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/help 2.png">
+</p>
 
 <h3 id="testing">Pengujian</h3>
