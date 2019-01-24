@@ -1,5 +1,7 @@
 {% extends 'financialperformance/base.html' %}
 
+{% load staticfiles %}
+
 {% block content %}
 
 
@@ -11,11 +13,70 @@
 
     <div class="mainsidebar">
       <div style="width:100%; height:100%; background-color:white; padding:2%">
-        <h4 id="meaning" style="font-weight:bold;">How to find out the meaning of variables from financial performance?</h4>
+        <div style="margin-bottom:70px;">
+            <h4 id="meaning" style="font-weight:bold;">How to find out the meaning of variables from financial performance?</h4>
+            <div style="padding:20px">
+                <p style="text-align:justify;">In determining the financial performance of a company, many variables are needed. The variables used include Cash,
+                Inventory, Current Asset, Fixed Asset, Total Asset, Current Liabilities, Long Term Liabilities, Total Liabilities,
+                Outstanding Share, Total Equity, Total Revenue, Gross Profit, Operating Profit or EBIT, Interest Expense, Net Profit,
+                Earnings per Share, Dividend Payment, and Stock Price (Close Year). </p>
+                <ul style="list-style:none;">
+                    <li>So, what is Cash?</li>
+                    <li>what is Inventory?</li>
+                    <li>what is Current Asset?</li>
+                    <li>… etc</li>
+                </ul>
+                <p style="text-align:justify;">In this website, you find out the meaning of each variable from financial performance by clicking the word. For example,
+                you want to know the definition of the cash, so just click the word of “cash” and the definition will appear.</p>
+                <div style="text-align:center;"><img src="{% static 'image/help_1.png' %}" width="600"></div>
+            </div>
+        </div>
 
-        <h4 id="analysis" style="font-weight:bold;">How to display analysis of financial performance from the name, code or sector of the company?</h4>
+        <div style="margin-bottom:70px;">
+            <h4 id="analysis" style="font-weight:bold;">How to display analysis of financial performance from the name, code or sector of the company?</h4>
+            <div style="padding:20px">
+                <p style="text-align:justify;">Here are some ways to display an analysis of financial performance from the name, code or sector of the company:</p>
+                <ol>
+                    <li style="margin-bottom:20px;">Visit the Analysis Financial Performance page via the link http://cakedev.pythonanywhere.com/analysis/ or click the Analysis Financial Performance menu on the sidebar menu.</li>
+                        <div style="text-align:center; margin-bottom:20px;"><img src="{% static 'image/help_2_1.png' %}" width="600"></div>
+                    <li style="margin-bottom:20px;">In the search box, you can click on the box and choose which company to analyze from the list of companies. Remember, you can only choose one company.</li>
+                        <div style="text-align:center; margin-bottom:20px;"><img src="{% static 'image/help_2_2.png' %}" width="600"></div>
+                        <p>Another way: In the search box you can directly enter the keywords of a company, for example, a word of the name, code or sector of the company.</p>
+                        <div style="text-align:center; margin-bottom:20px;"><img src="{% static 'image/help_2_2_1.png' %}" width="600"></div>
+                    <li style="margin-bottom:20px;">To start analyzing, click on Analyze button.</li>
+                        <div style="text-align:center; margin-bottom:20px;"><img src="{% static 'image/help_2_3.png' %}" width="600"></div>
+                    <li style="margin-bottom:20px;">The result will be shown directly.</li>
+                        <div style="text-align:center; margin-bottom:20px;"><img src="{% static 'image/help_2_4.png' %}" width="600"></div>
+                    <li style="margin-bottom:20px;">To see the reason of the result (Good or Not good), you can click on the result label (Good or Not good).</li>
+                        <div style="text-align:center;"><img src="{% static 'image/help_2_5.png' %}" width="600"></div>
+                </ol>
+            </div>
+        </div>
 
-        <h4 id="comparison" style="font-weight:bold;">How to display the comparison of financial performance from the name, code or sector of the company?</h4>
+        <div style="margin-bottom:70px;">
+            <h4 id="comparison" style="font-weight:bold;">How to display the comparison of financial performance from the name, code or sector of the company?</h4>
+            <div style="padding:20px">
+                <p style="text-align:justify;">Here are some ways to display an analysis of financial performance from the name, code or sector of the company:</p>
+                <ol>
+                    <li style="margin-bottom:20px;">Visit the Comparison Financial Performance page via the link http://cakedev.pythonanywhere.com/comparison/ or click the Comparison Financial Performance menu on the sidebar menu.</li>
+                        <div style="text-align:center; margin-bottom:20px;"><img src="{% static 'image/help_3_1.png' %}" width="600"></div>
+                    <li style="margin-bottom:20px;">In the search box, you can click on the box and choose which company to analyze from the list of companies.</li>
+                        <div style="text-align:center; margin-bottom:20px;"><img src="{% static 'image/help_3_2.png' %}" width="600"></div>
+                        <p>Another way: In the search box you can directly enter the keywords of a company, for example, a word of the name, code or sector of the company.</p>
+                        <div style="text-align:center; margin-bottom:20px;"><img src="{% static 'image/help_3_2_1.png' %}" width="600"></div>
+                    <li style="margin-bottom:20px;">If you want to add another company, repeat method number 2.</li>
+                        <div style="text-align:center; margin-bottom:20px;"><img src="{% static 'image/help_3_3.png' %}" width="600"></div>
+                        <p>Remember, you can only select four company (maximum).</p>
+                        <div style="text-align:center; margin-bottom:20px;"><img src="{% static 'image/help_3_3_1.png' %}" width="600"></div>
+                    <li style="margin-bottom:20px;">To see the result, you can click on Compare button</li>
+                        <div style="text-align:center; margin-bottom:20px;"><img src="{% static 'image/help_3_4.png' %}" width="600"></div>
+                    <li style="margin-bottom:20px; margin-bottom:20px;">The result will be shown below and will be displayed as a bar chart. Each chart has a threshold. Green chart means good, because the company’s ratio value is greater than the threshold value. Red chart means not good, because the company’s ratio value is lower than the threshold value.</li>
+                        <div style="text-align:center; margin-bottom:20px;"><img src="{% static 'image/help_3_5.png' %}" width="600"></div>
+                    <li style="margin-bottom:20px; margin-bottom:20px;">If you want to see the detail value of the company, you can click the selected company chart</li>
+                        <div style="text-align:center;"><img src="{% static 'image/help_3_6.png' %}" width="600"></div>
+                </ol>
+            </div>
+        </div>
 
       </div>
     </div>
