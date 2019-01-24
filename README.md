@@ -224,8 +224,8 @@ Berikut adalah batas angka pada setiap perhitungan rasio :
 
 - Help
 <p align="center">
-  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/help page 1.JPG">
-  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/help 2.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/help page 1.png">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/help 2.png">
 </p>
 
 <h3 id="testing">Pengujian</h3>
