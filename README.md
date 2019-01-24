@@ -58,10 +58,10 @@ Berikut adalah daftar rincian dokumentasi singkat dari proyek CAKe berbasis Web 
     - [x] Membuat multiselect form untuk memilih 2 perusahaan atau lebih untuk dibandingkan
     - [x] Menampilkan data rasio hasil perbandingan dalam bentuk diagram batang
     - [x] Memberikan ambang batasan (*threshold*) ratio untuk setiap diagram
-  - [ ] Implementasi Real Data *()*
-    - [ ] Menambahkan data sektor, perusahaan dan laporan keuangan
-    - [ ] Menambahkan data nilai batasan pada analisis dan perbandingan
-    - [ ] Menambahkan konten informasi pada tampilan Dashboard
+  - [x] Implementasi Real Data *(16 - 22 Januari 2019)*
+    - [x] Menambahkan data sektor, perusahaan dan laporan keuangan
+    - [x] Menambahkan data nilai batasan pada analisis dan perbandingan
+    - [x] Menambahkan konten informasi pada tampilan Dashboard
 
 <h3 id="project_timeline">Timeline Pengerjaan Proyek</h3>
 <p align="center">
