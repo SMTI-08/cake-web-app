@@ -175,4 +175,56 @@ Berikut adalah batas angka pada setiap perhitungan rasio :
 
 <h3 id="implementation">Implementsi</h3>
 
+- Dashboard Awal
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - Dashboard.JPG">
+</p>
+
+- Dashboard Company
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - Company1.JPG">
+</p>
+
+- Dashboard Sector
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - Sector1.JPG">
+</p>
+
+- Financial Performance (Before Click)
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - AFP1.JPG">
+</p>
+
+- Financial Performance  (After Click)
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - AFP Result1.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - AFP Result2.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - AFP Result3.JPG">
+</p>
+
+- Comparison Financial Performance (Before Click)
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP.JPG">
+</p>
+
+- Comparison Financial Performance (After Click)
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP1.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP Result1.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP Result2.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP Result3.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP Result4.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP Result5.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP Result6.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP Result7.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP Result8.JPG">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP Result9.JPG">
+  
+</p>
+
+- Help
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - help.JPG">
+</p>
+
 <h3 id="testing">Pengujian</h3>
