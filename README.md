@@ -13,7 +13,6 @@ Berikut adalah daftar rincian dokumentasi singkat dari proyek CAKe berbasis Web 
 - <a href=#interface_design>Desain Antarmuka</a></li>
 - <a href=#database_design>Desain Database</a></li>
 - <a href=#implementation>Implementsi</a></li>
-- <a href=#testing>Pengujian</a></li> 
 
 <h3 id="description">Deskripsi</h3>
 <p align="justify">Cake merupakan suatu wadah dalam bentuk aplikasi web untuk membantu para investor melakukan analisis untuk mengambil keputusan dalam menanamkan modal disuatu saham perusahaan. Aplikasi ini ditujukan untuk user yang berperan sebagai investor saham jangka panjang. Fitur utama pada aplikasi ini adalah analisis dengan menggunakan salah satu metode analisis fundamental yaitu analisis kinerja keuangan tahunan. Analisis kinerja keuangan terdiri dari dua tipe yaitu analisis kinerja keuangan secara individu perusahaan dan analisis perbandingan kinerja keuangan antar perusahaan. Data yang digunakan pada aplikasi ini berasal dari laporan keuangan tahunan 45 perusahaan di Indonesia yang masuk daftar indeks LQ45 dari sembilan sektor.</p>
@@ -81,6 +80,14 @@ Implementasi. Pada tahap ini dilakukan implementasi dan testing terhadap sistem 
 <p align="center">
   <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/rincian kegiatan.JPG">
 </p>
+
+<h3 id="project_timeline">Timeline Aktual Pengerjaan Proyek</h3>
+<p align="center">
+  <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/Actual Timeline.JPG">
+</p>
+
+Keterangan :
+- Terdapat tambahan waktu pada proses Desain dan Implementasi di minggu ke-4 bulan Januari 2019. Tambahan waktu tersebut digunakan untuk membuat desain dan implementasi fitur baru, yaitu halaman Help. Halaman Help digunakan untuk membantu pengguna dalam menggunakan website CAKe.
 
 <h4>Matriks RACI</h4>
 <p align="center">
@@ -219,7 +226,6 @@ Berikut adalah batas angka pada setiap perhitungan rasio :
   <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP Result7.JPG">
   <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP Result8.JPG">
   <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/imp - CFP Result9.JPG">
-  
 </p>
 
 - Help
@@ -227,5 +233,3 @@ Berikut adalah batas angka pada setiap perhitungan rasio :
   <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/help page 1.png">
   <img src="https://github.com/SMTI-08/cake-web-app/blob/master/static/image/help 2.png">
 </p>
-
-<h3 id="testing">Pengujian</h3>
